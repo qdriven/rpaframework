@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Netsuite" href="../netsuite/index.html" />
+    <link rel="next" title="MFA" href="../mfa/index.html" />
     <link rel="prev" title="JSON" href="index.html" />
 	<!-- Cookie consent -->
 <link async rel="stylesheet" type="text/css" href="../../_static/cookie.css"/>
@@ -116,6 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dialogs/index.html">Dialogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
@@ -130,6 +133,8 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Python API</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
@@ -468,7 +473,7 @@ be seen in the <a class="reference external" href="http://goessner.net/articles/
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.add_to_json">
-<code class="sig-name descname">add_to_json</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None], expr: str, value: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]</em><span class="sig-paren">)</span> &#x2192; Union[Dict[Hashable, Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], List[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], str, int, float, bool, None]<a class="headerlink" href="#RPA.JSON.JSON.add_to_json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">add_to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.add_to_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add items into a JSON serializable object and return the result.</p>
 <p>If the target is a list, the values are appended to the end.
 If the target is a dict, the keys are either added or updated.</p>
@@ -508,7 +513,7 @@ If the target is a dict, the keys are either added or updated.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.convert_json_to_string">
-<code class="sig-name descname">convert_json_to_string</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#RPA.JSON.JSON.convert_json_to_string" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">convert_json_to_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.convert_json_to_string" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a JSON serializable object to a string and return it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -539,7 +544,7 @@ If the target is a dict, the keys are either added or updated.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.convert_string_to_json">
-<code class="sig-name descname">convert_string_to_json</code><span class="sig-paren">(</span><em class="sig-param">doc: str</em><span class="sig-paren">)</span> &#x2192; Union[Dict[Hashable, Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], List[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], str, int, float, bool, None]<a class="headerlink" href="#RPA.JSON.JSON.convert_string_to_json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">convert_string_to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.convert_string_to_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert a string to a JSON serializable object and return it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -570,7 +575,7 @@ If the target is a dict, the keys are either added or updated.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.delete_from_json">
-<code class="sig-name descname">delete_from_json</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None], expr: str</em><span class="sig-paren">)</span> &#x2192; Union[Dict[Hashable, Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], List[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], str, int, float, bool, None]<a class="headerlink" href="#RPA.JSON.JSON.delete_from_json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_from_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.delete_from_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Delete values from a JSON serializable object and return the result.
 Will delete all values that match the expression.</p>
 <dl class="field-list simple">
@@ -603,7 +608,7 @@ Will delete all values that match the expression.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.get_value_from_json">
-<code class="sig-name descname">get_value_from_json</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None], expr: str, default: Optional[Any] = None</em><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#RPA.JSON.JSON.get_value_from_json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_value_from_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.get_value_from_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a single value from a JSON serializable object that matches the given expression.</p>
 <p>Raises a ValueError if there is more than one match.
 Returns the given default argument (or None) if there
@@ -684,7 +689,7 @@ were no matches.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.get_values_from_json">
-<code class="sig-name descname">get_values_from_json</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None], expr: str</em><span class="sig-paren">)</span> &#x2192; list<a class="headerlink" href="#RPA.JSON.JSON.get_values_from_json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_values_from_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.get_values_from_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get all values from a JSON serializable object that match the given expression.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -782,7 +787,7 @@ were no matches.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.load_json_from_file">
-<code class="sig-name descname">load_json_from_file</code><span class="sig-paren">(</span><em class="sig-param">filename: str</em>, <em class="sig-param">encoding='utf-8'</em><span class="sig-paren">)</span> &#x2192; Union[Dict[Hashable, Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], List[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], str, int, float, bool, None]<a class="headerlink" href="#RPA.JSON.JSON.load_json_from_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_json_from_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.load_json_from_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load JSON data from a file, and return it as JSON serializable object.
 Depending on the input file the object can be either a dictionary,
 a list, or a scalar value.</p>
@@ -808,7 +813,7 @@ a list, or a scalar value.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.save_json_to_file">
-<code class="sig-name descname">save_json_to_file</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None], filename: str, indent: Optional[int] = None, encoding: str = 'utf-8'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#RPA.JSON.JSON.save_json_to_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">save_json_to_file</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.save_json_to_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save a JSON serializable object or a string containing
 a JSON value into a file.</p>
 <dl class="field-list simple">
@@ -844,7 +849,7 @@ a JSON value into a file.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.JSON.update_value_to_json">
-<code class="sig-name descname">update_value_to_json</code><span class="sig-paren">(</span><em class="sig-param">doc: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None], expr: str, value: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]</em><span class="sig-paren">)</span> &#x2192; Union[Dict[Hashable, Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], List[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], str, int, float, bool, None]<a class="headerlink" href="#RPA.JSON.JSON.update_value_to_json" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">update_value_to_json</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.JSON.update_value_to_json" title="Permalink to this definition">¶</a></dt>
 <dd><p>Update existing values in a JSON serializable object and return the result.
 Will change all values that match the expression.</p>
 <dl class="field-list simple">
@@ -951,7 +956,7 @@ Will change all values that match the expression.</p>
 
 <dl class="method">
 <dt id="RPA.JSON.RPAFilter.filter">
-<code class="sig-name descname">filter</code><span class="sig-paren">(</span><em class="sig-param">fn: Callable[[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], bool], data: Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]</em><span class="sig-paren">)</span> &#x2192; Union[Dict[Hashable, Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], List[Union[Dict[Hashable, JSONType], List[JSONType], str, int, float, bool, None]], str, int, float, bool, None]<a class="headerlink" href="#RPA.JSON.RPAFilter.filter" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">filter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.JSON.RPAFilter.filter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns <cite>data</cite> with the specified path filtering nodes according
 the filter evaluation result returned by the filter function.</p>
 <dl>
@@ -1289,7 +1294,7 @@ if the specified path exists.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../netsuite/index.html" class="btn btn-neutral float-right" title="Netsuite" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../mfa/index.html" class="btn btn-neutral float-right" title="MFA" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="JSON" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

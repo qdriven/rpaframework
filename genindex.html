@@ -115,6 +115,9 @@
 <li class="toctree-l1"><a class="reference internal" href="libraries/desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/desktop_windows/index.html">Desktop.Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/dialogs/index.html">Dialogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/email_exchange/index.html">Email.Exchange</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/email_imapsmtp/index.html">Email.ImapSmtp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/excel_application/index.html">Excel.Application</a></li>
@@ -126,6 +129,8 @@
 <li class="toctree-l1"><a class="reference internal" href="libraries/images/index.html">Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/javaaccessbridge/index.html">JavaAccessBridge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="libraries/msgraph/index.html">MSGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/netsuite/index.html">Netsuite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/notifier/index.html">Notifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="libraries/outlook_application/index.html">Outlook.Application</a></li>
@@ -250,6 +255,8 @@
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.absolute_path">absolute_path() (RPA.FileSystem.FileSystem method)</a>
 </li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.AccessType">AccessType (class in RPA.Email.Exchange)</a>
+</li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.account">account (RPA.Salesforce.Salesforce attribute)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.Action">Action (class in RPA.Email.ImapSmtp)</a>
@@ -287,6 +294,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.add_library_components">add_library_components() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.add_library_components">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.add_library_components">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.add_library_components">(RPA.PDF.PDF method)</a>
@@ -314,6 +323,12 @@
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.all_but_empty">all_but_empty() (RPA.Database.Configuration method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.analyze_document">analyze_document() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.analyze_document">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.append_column">append_column() (RPA.Tables.Table method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.append_row">append_row() (RPA.Tables.Table method)</a>
@@ -348,8 +363,6 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.ApplicationNotStarted">ApplicationNotStarted</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive">Archive (class in RPA.Archive)</a>
 </li>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive.archive_folder_with_tar">archive_folder_with_tar() (RPA.Archive.Archive method)</a>
@@ -359,6 +372,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserNotFoundError.args">args (RPA.Browser.Selenium.BrowserNotFoundError attribute)</a>
 
       <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.RedshiftDatabaseError.args">(RPA.Cloud.AWS.RedshiftDatabaseError attribute)</a>
+</li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.ApplicationNotStarted.args">(RPA.Desktop.Windows.ApplicationNotStarted attribute)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.ElementNotFoundError.args">(RPA.Desktop.Windows.ElementNotFoundError attribute)</a>
@@ -397,6 +412,14 @@
 </li>
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaWindowNotFound.args">(RPA.JavaAccessBridge.JavaWindowNotFound attribute)</a>
 </li>
+        <li><a href="libraries/mfa/python.html#RPA.MFA.HOTPNotSetError.args">(RPA.MFA.HOTPNotSetError attribute)</a>
+</li>
+        <li><a href="libraries/mfa/python.html#RPA.MFA.TOTPNotSetError.args">(RPA.MFA.TOTPNotSetError attribute)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraphAuthenticationError.args">(RPA.MSGraph.MSGraphAuthenticationError attribute)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraphDownloadError.args">(RPA.MSGraph.MSGraphDownloadError attribute)</a>
+</li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.NetsuiteAuthenticationError.args">(RPA.Netsuite.NetsuiteAuthenticationError attribute)</a>
 </li>
         <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError.args">(RPA.Robocorp.Vault.RobocorpVaultError attribute)</a>
@@ -407,12 +430,24 @@
 </li>
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDataNotAnDictionary.args">(RPA.Salesforce.SalesforceDataNotAnDictionary attribute)</a>
 </li>
+        <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDomainChangeError.args">(RPA.Salesforce.SalesforceDomainChangeError attribute)</a>
+</li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.assert_page_contains">assert_page_contains() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.assert_page_not_contains">assert_page_not_contains() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.assume_role">assume_role() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.assume_role">(RPA.Cloud.AWS.ServiceSTS method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.attach_chrome_browser">attach_chrome_browser() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.AttachmentPosition">AttachmentPosition (class in RPA.Email.ImapSmtp)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.attribute_map">attribute_map (RPA.Hubspot.ExtendedFilter attribute)</a>
 </li>
@@ -436,11 +471,21 @@
         <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.authorize">(RPA.Twitter.Twitter method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.authorize_and_get_token">authorize_and_get_token() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.authorize_imap">authorize_imap() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.authorize_smtp">authorize_smtp() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.AVAILABLE_OPTIONS">AVAILABLE_OPTIONS (RPA.Browser.Selenium.Selenium attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.AVAILABLE_SERVICES">AVAILABLE_SERVICES (RPA.Browser.Selenium.Selenium attribute)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS">AWS (class in RPA.Cloud.AWS)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.aws_dependency_required">aws_dependency_required() (in module RPA.Cloud.AWS)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase">AWSBase (class in RPA.Cloud.AWS)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.Azure">Azure (class in RPA.Cloud.Azure)</a>
 </li>
@@ -452,11 +497,19 @@
 <h2 id="B">B</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.EngineName.BASE64">BASE64 (RPA.DocumentAI.DocumentAI.EngineName attribute)</a>
+</li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI">Base64AI (class in RPA.DocumentAI.Base64AI)</a>
+</li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.base_api">base_api() (RPA.Robocorp.Process.Process property)</a>
+</li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.BASE_URL">BASE_URL (RPA.DocumentAI.Base64AI.Base64AI attribute)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.BaseAdapter">BaseAdapter (class in RPA.Robocorp.WorkItems)</a>
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.BaseSecretManager">BaseSecretManager (class in RPA.Robocorp.Vault)</a>
+</li>
+      <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.BaseWorkbook">BaseWorkbook (class in RPA.Excel.Files)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.batch_input">batch_input() (RPA.Hubspot.Hubspot property)</a>
 </li>
@@ -466,6 +519,14 @@
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.RGB.blue">blue (RPA.Images.RGB attribute)</a>
 </li>
+      <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.BaseWorkbook.book">book() (RPA.Excel.Files.BaseWorkbook property)</a>
+
+      <ul>
+        <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.book">(RPA.Excel.Files.XlsWorkbook property)</a>
+</li>
+        <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.book">(RPA.Excel.Files.XlsxWorkbook property)</a>
+</li>
+      </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.boot_time_in_seconds_from_epoch">boot_time_in_seconds_from_epoch() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
@@ -474,9 +535,17 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.boot_time_in_seconds_from_epoch">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.AttachmentPosition.BOTTOM">BOTTOM (RPA.Email.ImapSmtp.AttachmentPosition attribute)</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.BROWSER_NAMES">BROWSER_NAMES (RPA.Browser.Selenium.Selenium attribute)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride">BrowserManagementKeywordsOverride (class in RPA.Browser.Selenium)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserNotFoundError">BrowserNotFoundError</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.build_base_url">build_base_url() (RPA.MSGraph.SharedItem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.build_url">build_url() (RPA.MSGraph.SharedItem method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.BUILTIN_PLURAL_MAP">BUILTIN_PLURAL_MAP (RPA.Hubspot.Hubspot attribute)</a>
 </li>
@@ -503,6 +572,10 @@
 </li>
       </ul></li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.change_file_extension">change_file_extension() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.check_token">check_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
+</li>
+      <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.check_vulnerabilities">check_vulnerabilities() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.checked">checked (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
@@ -546,6 +619,24 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.click_type">click_type() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.clients">clients (RPA.Cloud.AWS.AWS attribute)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase.clients">(RPA.Cloud.AWS.AWSBase attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.clients">(RPA.Cloud.AWS.ServiceComprehend attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.clients">(RPA.Cloud.AWS.ServiceRedshiftData attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.clients">(RPA.Cloud.AWS.ServiceS3 attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.clients">(RPA.Cloud.AWS.ServiceSQS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.clients">(RPA.Cloud.AWS.ServiceSTS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.clients">(RPA.Cloud.AWS.ServiceTextract attribute)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/desktop_clipboard/python.html#RPA.Desktop.Clipboard.Clipboard">Clipboard (class in RPA.Desktop.Clipboard)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.close">close() (RPA.Excel.Files.XlsWorkbook method)</a>
@@ -588,6 +679,8 @@
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.ConfigurationType">ConfigurationType (class in RPA.Robocorp.Process)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.configure_msgraph_client">configure_msgraph_client() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.connect">connect() (RPA.FTP.FTP method)</a>
 
       <ul>
@@ -612,8 +705,18 @@
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.JSON.convert_string_to_json">convert_string_to_json() (RPA.JSON.JSON method)</a>
 </li>
-      <li><a href="libraries/tables/python.html#RPA.Tables.Table.copy">copy() (RPA.Tables.Table method)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.convert_textract_response_to_model">convert_textract_response_to_model() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.convert_textract_response_to_model">(RPA.Cloud.AWS.ServiceTextract method)</a>
 </li>
+      </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.copy">copy() (RPA.MSGraph.SharedItem method)</a>
+
+      <ul>
+        <li><a href="libraries/tables/python.html#RPA.Tables.Table.copy">(RPA.Tables.Table method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.copy_directory">copy_directory() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.copy_file">copy_file() (RPA.FileSystem.FileSystem method)</a>
@@ -630,6 +733,8 @@
         <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.count">(RPA.FileSystem.File method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.OTPMode.COUNTER">COUNTER (RPA.MFA.OTPMode attribute)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.BatchMode.CREATE">CREATE (RPA.Hubspot.BatchMode attribute)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.create">create() (RPA.Excel.Files.XlsWorkbook method)</a>
@@ -640,6 +745,12 @@
       </ul></li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.create_binary_file">create_binary_file() (RPA.FileSystem.FileSystem method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.create_bucket">create_bucket() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.create_bucket">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.create_client_cert_session">create_client_cert_session() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.create_custom_session">create_custom_session() (RPA.HTTP.HTTP method)</a>
@@ -682,6 +793,18 @@
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.create_public_key_url">create_public_key_url() (RPA.Robocorp.Vault.RobocorpVault method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.create_queue">create_queue() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.create_queue">(RPA.Cloud.AWS.ServiceSQS method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.create_redshift_statement_parameters">create_redshift_statement_parameters() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.create_redshift_statement_parameters">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.create_salesforce_object">create_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.SearchLexer.create_search_object">create_search_object() (RPA.Hubspot.SearchLexer method)</a>
@@ -689,6 +812,8 @@
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.create_secret_url">create_secret_url() (RPA.Robocorp.Vault.RobocorpVault method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.create_session">create_session() (RPA.HTTP.HTTP method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.create_sharepoint_list">create_sharepoint_list() (RPA.MSGraph.MSGraph method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.create_table">create_table() (RPA.Tables.Tables method)</a>
 </li>
@@ -738,12 +863,30 @@
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.TemplateMatcher.DEFAULT_TOLERANCE">DEFAULT_TOLERANCE (RPA.Images.TemplateMatcher attribute)</a>
 </li>
-      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.delete">delete() (RPA.FTP.FTP method)</a>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.AccessType.DELEGATE">DELEGATE (RPA.Email.Exchange.AccessType attribute)</a>
 </li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.delete">delete() (RPA.FTP.FTP method)</a>
+
+      <ul>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.delete">(RPA.MSGraph.SharedItem method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.delete_all_sessions">delete_all_sessions() (RPA.HTTP.HTTP method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.delete_bucket">delete_bucket() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.delete_bucket">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.delete_columns">delete_columns() (RPA.Tables.Table method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.delete_files">delete_files() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.delete_files">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.delete_folder">delete_folder() (RPA.Email.Exchange.Exchange method)</a>
 
       <ul>
@@ -752,20 +895,40 @@
       </ul></li>
       <li><a href="libraries/json/python.html#RPA.JSON.JSON.delete_from_json">delete_from_json() (RPA.JSON.JSON method)</a>
 </li>
-      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.delete_message">delete_message() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.delete_message">delete_message() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.delete_message">(RPA.Cloud.AWS.ServiceSQS method)</a>
 </li>
+        <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.delete_message">(RPA.Email.ImapSmtp.ImapSmtp method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.delete_messages">delete_messages() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.delete_on_session">delete_on_session() (RPA.HTTP.HTTP method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.delete_queue">delete_queue() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.delete_queue">(RPA.Cloud.AWS.ServiceSQS method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.delete_request">delete_request() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.delete_rows">delete_rows() (RPA.Tables.Table method)</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.delete_salesforce_object">delete_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.delete_token">delete_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
+</li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.delete_work_item_variables">delete_work_item_variables() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.describe_redshift_table">describe_redshift_table() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.describe_redshift_table">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.describe_salesforce_object">describe_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.description">description() (RPA.Database.Database method)</a>
@@ -776,10 +939,30 @@
       </ul></li>
       <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop">Desktop (class in RPA.Desktop)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.detect_document_text">detect_document_text() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.detect_document_text">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.detect_entities">detect_entities() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.detect_entities">(RPA.Cloud.AWS.ServiceComprehend method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceFace.detect_face">detect_face() (RPA.Cloud.Azure.ServiceFace method)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceTextAnalytics.detect_language">detect_language() (RPA.Cloud.Azure.ServiceTextAnalytics method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.detect_sentiment">detect_sentiment() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.detect_sentiment">(RPA.Cloud.AWS.ServiceComprehend method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/tables/python.html#RPA.Tables.Dialect">Dialect (class in RPA.Tables)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.dimensions">dimensions() (RPA.Tables.Table property)</a>
@@ -792,8 +975,8 @@
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.do_message_actions">do_message_actions() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI">DocumentAI (class in RPA.DocumentAI.DocumentAI)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.does_alert_contain">does_alert_contain() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.does_alert_not_contain">does_alert_not_contain() (RPA.Browser.Selenium.Selenium method)</a>
@@ -855,7 +1038,23 @@
       <ul>
         <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.download">(RPA.HTTP.HTTP method)</a>
 </li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.download">(RPA.MSGraph.SharedItem method)</a>
+</li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.download_file_from_onedrive">download_file_from_onedrive() (RPA.MSGraph.MSGraph method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.download_file_from_share_link">download_file_from_share_link() (RPA.MSGraph.MSGraph method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.download_file_from_sharepoint">download_file_from_sharepoint() (RPA.MSGraph.MSGraph method)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.download_files">download_files() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.download_files">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.download_folder_from_onedrive">download_folder_from_onedrive() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.drag_and_drop">drag_and_drop() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.driver">driver() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
@@ -904,16 +1103,20 @@
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.ENCRYPTION_SCHEME">ENCRYPTION_SCHEME (RPA.Robocorp.Vault.RobocorpVault attribute)</a>
 </li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.engine">engine() (RPA.DocumentAI.DocumentAI.DocumentAI property)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.EngineName">EngineName (class in RPA.DocumentAI.DocumentAI)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.ensure_scheme">ensure_scheme() (in module RPA.Browser.Selenium)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.ensure_unique">ensure_unique() (in module RPA.Excel.Files)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.Error">Error (class in RPA.Robocorp.WorkItems)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.event_firing_webdriver">event_firing_webdriver() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/tables/python.html#RPA.Tables.Dialect.Excel">Excel (RPA.Tables.Dialect attribute)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Dialect.ExcelTab">ExcelTab (RPA.Tables.Dialect attribute)</a>
@@ -926,6 +1129,18 @@
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.execute_dataloader_insert">execute_dataloader_insert() (RPA.Salesforce.Salesforce method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.execute_redshift_statement">execute_redshift_statement() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.execute_redshift_statement">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.execute_redshift_statement_asyncronously">execute_redshift_statement_asyncronously() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.execute_redshift_statement_asyncronously">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.execute_sql_script">execute_sql_script() (RPA.Database.Database method)</a>
 </li>
       <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.export_as_pdf">export_as_pdf() (RPA.Excel.Application.Application method)</a>
@@ -944,6 +1159,8 @@
 
       <ul>
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.extension">(RPA.Excel.Files.XlsxWorkbook property)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.extension">(RPA.MSGraph.SharedItem property)</a>
 </li>
       </ul></li>
       <li><a href="libraries/archive/python.html#RPA.Archive.Archive.extract_archive">extract_archive() (RPA.Archive.Archive method)</a>
@@ -982,11 +1199,15 @@
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.filter">filter() (RPA.JSON.RPAFilter method)</a>
 </li>
+      <li><a href="libraries/tables/python.html#RPA.Tables.Table.filter_all">filter_all() (RPA.Tables.Table method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.filter_by_column">filter_by_column() (RPA.Tables.Table method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.filter_empty_rows">filter_empty_rows() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.filter_table_by_column">filter_table_by_column() (RPA.Tables.Tables method)</a>
+</li>
+      <li><a href="libraries/tables/python.html#RPA.Tables.Tables.filter_table_with_keyword">filter_table_with_keyword() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.find">find() (RPA.JSON.RPAFilter method)</a>
 </li>
@@ -1022,6 +1243,8 @@
 </li>
       <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.find_first_available_row">find_first_available_row() (RPA.Excel.Application.Application method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.find_onedrive_file">find_onedrive_file() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.find_or_create">find_or_create() (RPA.JSON.RPAFilter method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.find_table_rows">find_table_rows() (RPA.Tables.Tables method)</a>
@@ -1029,6 +1252,10 @@
       <li><a href="libraries/images/python.html#RPA.Images.Images.find_template_in_image">find_template_in_image() (RPA.Images.Images method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.flag_messages">flag_messages() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
+</li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.focus_and_click">focus_and_click() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.focus_and_input_text">focus_and_input_text() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.follow">follow() (RPA.Twitter.Twitter method)</a>
 </li>
@@ -1058,6 +1285,20 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.generate_key">generate_key() (RPA.Crypto.Crypto method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.generate_oauth_authorization_url">generate_oauth_authorization_url() (RPA.MSGraph.MSGraph method)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.generate_presigned_url">generate_presigned_url() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.generate_presigned_url">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.generic_click_element">generic_click_element() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.generic_input_password">generic_input_password() (RPA.SAP.SAP method)</a>
+</li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.generic_input_text">generic_input_text() (RPA.SAP.SAP method)</a>
+</li>
       <li><a href="libraries/notifier/python.html#RPA.Notifier.Notifier.generic_notify">generic_notify() (RPA.Notifier.Notifier method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.get">get() (RPA.Database.Configuration method)</a>
@@ -1071,6 +1312,8 @@
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_accounts">get_accounts() (RPA.Netsuite.Netsuite method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.get_active_worksheet">get_active_worksheet() (RPA.Excel.Files.Files method)</a>
+</li>
+      <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.get_all_models">get_all_models() (RPA.DocumentAI.Nanonets.Nanonets method)</a>
 </li>
       <li><a href="libraries/word_application/python.html#RPA.Word.Application.Application.get_all_texts">get_all_texts() (RPA.Word.Application.Application method)</a>
 </li>
@@ -1102,6 +1345,12 @@
         <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_cell_value">(RPA.SAP.SAP method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_cells">get_cells() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.get_cells">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_classifications">get_classifications() (RPA.Netsuite.Netsuite method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_column">get_column() (RPA.Tables.Table method)</a>
@@ -1109,6 +1358,8 @@
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.get_column_index">get_column_index() (in module RPA.Excel.Files)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.get_connection_parameters_as_string">get_connection_parameters_as_string() (RPA.Database.Configuration method)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.get_counter_based_otp">get_counter_based_otp() (RPA.MFA.MFA method)</a>
 </li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_currencies">get_currencies() (RPA.Netsuite.Netsuite method)</a>
 </li>
@@ -1134,6 +1385,24 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_dialog_rectangle">get_dialog_rectangle() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_document_analysis">get_document_analysis() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.get_document_analysis">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_document_text_detection">get_document_text_detection() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.get_document_text_detection">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.get_domain">get_domain() (RPA.Salesforce.Salesforce method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_drive">get_drive() (RPA.MSGraph.SharedItem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_drive_instance">get_drive_instance() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_element">get_element() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.get_element_actions">get_element_actions() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
@@ -1152,10 +1421,18 @@
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_element_type">get_element_type() (RPA.SAP.SAP method)</a>
 </li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_element_type_of_object">get_element_type_of_object() (RPA.SAP.SAP method)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.get_elements">get_elements() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.get_emails">get_emails() (RPA.Outlook.Application.Application method)</a>
 </li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.get_fields_from_prediction_result">get_fields_from_prediction_result() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+
+      <ul>
+        <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.get_fields_from_prediction_result">(RPA.DocumentAI.Nanonets.Nanonets method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.BaseAdapter.get_file">get_file() (RPA.Robocorp.WorkItems.BaseAdapter method)</a>
 
       <ul>
@@ -1172,6 +1449,8 @@
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.get_file_for_streaming_upload">get_file_for_streaming_upload() (RPA.HTTP.HTTP static method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_file_instance">get_file_instance() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.get_file_modified_date">get_file_modified_date() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.get_file_name">get_file_name() (RPA.FileSystem.FileSystem method)</a>
@@ -1180,13 +1459,21 @@
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.get_file_size">get_file_size() (RPA.FileSystem.FileSystem method)</a>
 </li>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.get_file_stem">get_file_stem() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_folder_instance">get_folder_instance() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.get_folder_list">get_folder_list() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.get_input_work_item">get_input_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_items_from_sharepoint_list">get_items_from_sharepoint_list() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_keyword_arguments">get_keyword_arguments() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.get_keyword_arguments">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.get_keyword_arguments">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.get_keyword_arguments">(RPA.PDF.PDF method)</a>
@@ -1197,6 +1484,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_keyword_documentation">get_keyword_documentation() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.get_keyword_documentation">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.get_keyword_documentation">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.get_keyword_documentation">(RPA.PDF.PDF method)</a>
@@ -1207,6 +1496,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_keyword_names">get_keyword_names() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.get_keyword_names">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.get_keyword_names">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.get_keyword_names">(RPA.PDF.PDF method)</a>
@@ -1217,6 +1508,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_keyword_source">get_keyword_source() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.get_keyword_source">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.get_keyword_source">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.get_keyword_source">(RPA.PDF.PDF method)</a>
@@ -1227,6 +1520,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_keyword_tags">get_keyword_tags() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.get_keyword_tags">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.get_keyword_tags">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.get_keyword_tags">(RPA.PDF.PDF method)</a>
@@ -1237,6 +1532,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_keyword_types">get_keyword_types() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.get_keyword_types">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.get_keyword_types">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.get_keyword_types">(RPA.PDF.PDF method)</a>
@@ -1256,8 +1553,12 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_machine_name">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.get_me">get_me() (RPA.Twitter.Twitter method)</a>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_me">get_me() (RPA.MSGraph.MSGraph method)</a>
+
+      <ul>
+        <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.get_me">(RPA.Twitter.Twitter method)</a>
 </li>
+      </ul></li>
       <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.get_memory_stats">get_memory_stats() (RPA.Desktop.OperatingSystem.OperatingSystem method)</a>
 
       <ul>
@@ -1278,7 +1579,17 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.get_owner_of_object">get_owner_of_object() (RPA.Hubspot.Hubspot method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_pages_and_text">get_pages_and_text() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.get_pages_and_text">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_parent">get_parent() (RPA.MSGraph.SharedItem method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.get_part_filename">get_part_filename() (in module RPA.Email.ImapSmtp)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_permissions">get_permissions() (RPA.MSGraph.SharedItem method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.get_pipeline">get_pipeline() (RPA.Hubspot.Hubspot method)</a>
 </li>
@@ -1298,7 +1609,17 @@
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.get_publickey">get_publickey() (RPA.Robocorp.Vault.RobocorpVault method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_redshift_statement_results">get_redshift_statement_results() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.get_redshift_statement_results">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.get_request">get_request() (RPA.HTTP.HTTP method)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.get_result">get_result() (RPA.DocumentAI.DocumentAI.DocumentAI method)</a>
+</li>
+      <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.get_robot_run_artifact">get_robot_run_artifact() (RPA.Robocorp.Process.Process method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_row">get_row() (RPA.Tables.Table method)</a>
 </li>
@@ -1311,6 +1632,8 @@
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.get_salesforce_object_metadata">get_salesforce_object_metadata() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.get_scaled_coordinate">get_scaled_coordinate() (in module RPA.JavaAccessBridge)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_scopes">get_scopes() (RPA.MSGraph.MSGraph method)</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_scroll_position">get_scroll_position() (RPA.SAP.SAP method)</a>
 </li>
@@ -1332,11 +1655,15 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_session_id">get_session_id() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.get_sharepoint_site">get_sharepoint_site() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_slice">get_slice() (RPA.Tables.Table method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_source">get_source() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_spaced_string">get_spaced_string() (RPA.Desktop.Windows.Windows method)</a>
+</li>
+      <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_statusbar_type">get_statusbar_type() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.get_table">get_table() (RPA.Tables.Table method)</a>
 </li>
@@ -1350,15 +1677,31 @@
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.get_table_slice">get_table_slice() (RPA.Tables.Tables method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_tables">get_tables() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.get_tables">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.get_tables_from_prediction_result">get_tables_from_prediction_result() (RPA.DocumentAI.Nanonets.Nanonets method)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.get_testability_status">get_testability_status() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.get_text">get_text() (RPA.Desktop.Windows.Windows method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_thumbnails">get_thumbnails() (RPA.MSGraph.SharedItem method)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.get_time_based_otp">get_time_based_otp() (RPA.MFA.MFA method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_timeout">get_timeout() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.get_title">get_title() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.get_token">get_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.get_user">get_user() (RPA.Hubspot.Hubspot method)</a>
+</li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.get_user_data">get_user_data() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Twitter.get_user_profile">get_user_profile() (RPA.Twitter.Twitter method)</a>
 </li>
@@ -1380,7 +1723,11 @@
 </li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.get_vendors">get_vendors() (RPA.Netsuite.Netsuite method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_version">get_version() (RPA.MSGraph.SharedItem method)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.get_version_info">get_version_info() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.get_versions">get_versions() (RPA.MSGraph.SharedItem method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.get_welcome_message">get_welcome_message() (RPA.FTP.FTP method)</a>
 </li>
@@ -1390,6 +1737,12 @@
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.get_window_title">get_window_title() (RPA.SAP.SAP method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.get_words">get_words() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.get_words">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.get_work_item">get_work_item() (RPA.Robocorp.Process.Process method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.get_work_item_file">get_work_item_file() (RPA.Robocorp.WorkItems.WorkItems method)</a>
@@ -1411,6 +1764,10 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.go_back">go_back() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.go_to">go_to() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+</li>
+      <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google">Google (class in RPA.Cloud.Google)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.EngineName.GOOGLE">GOOGLE (RPA.DocumentAI.DocumentAI.EngineName attribute)</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.RGB.green">green (RPA.Images.RGB attribute)</a>
 </li>
@@ -1453,6 +1810,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.highlight_elements">highlight_elements() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.HOTPNotSetError">HOTPNotSetError</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.html_table">html_table() (in module RPA.Browser.Selenium)</a>
 </li>
@@ -1498,6 +1857,16 @@
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp">ImapSmtp (class in RPA.Email.ImapSmtp)</a>
 </li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.AccessType.IMPERSONATION">IMPERSONATION (RPA.Email.Exchange.AccessType attribute)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.import_tables">import_tables() (in module RPA.Cloud.AWS)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.import_vault">import_vault() (in module RPA.Cloud.AWS)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.import_vault">(in module RPA.Cloud.Google)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.in_reply_to_screen_name">in_reply_to_screen_name (RPA.Twitter.Tweet attribute)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.Directory.index">index() (RPA.FileSystem.Directory method)</a>
@@ -1512,14 +1881,52 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.info">info() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_comprehend_client">init_comprehend_client() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.init_comprehend_client">(RPA.Cloud.AWS.ServiceComprehend method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceComputerVision.init_computer_vision_service">init_computer_vision_service() (RPA.Cloud.Azure.ServiceComputerVision method)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.init_engine">init_engine() (RPA.DocumentAI.DocumentAI.DocumentAI method)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceFace.init_face_service">init_face_service() (RPA.Cloud.Azure.ServiceFace method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_redshift_data_client">init_redshift_data_client() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.init_redshift_data_client">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_s3_client">init_s3_client() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.init_s3_client">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech.init_speech_service">init_speech_service() (RPA.Cloud.Azure.ServiceSpeech method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_sqs_client">init_sqs_client() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.init_sqs_client">(RPA.Cloud.AWS.ServiceSQS method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_sts_client">init_sts_client() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.init_sts_client">(RPA.Cloud.AWS.ServiceSTS method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceTextAnalytics.init_text_analytics_service">init_text_analytics_service() (RPA.Cloud.Azure.ServiceTextAnalytics method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.init_textract_client">init_textract_client() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.init_textract_client">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.input_password">input_password() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.FileAdapter.input_path">input_path() (RPA.Robocorp.WorkItems.FileAdapter property)</a>
@@ -1538,6 +1945,8 @@
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.insert_image">(RPA.Excel.Files.XlsxWorkbook method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.insert_image_to_worksheet">insert_image_to_worksheet() (RPA.Excel.Files.Files method)</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.instance">instance() (RPA.Salesforce.Salesforce property)</a>
@@ -1552,8 +1961,6 @@
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.is_directory_empty">is_directory_empty() (RPA.FileSystem.FileSystem method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.is_directory_not_empty">is_directory_not_empty() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItem.is_dirty">is_dirty() (RPA.Robocorp.WorkItems.WorkItem property)</a>
@@ -1582,15 +1989,23 @@
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.is_element_visible">(RPA.Desktop.Windows.Windows method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.is_file">is_file() (RPA.MSGraph.SharedItem property)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.is_file_empty">is_file_empty() (RPA.FileSystem.FileSystem method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.is_file_not_empty">is_file_not_empty() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.is_folder">is_folder() (RPA.MSGraph.SharedItem property)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.is_image">is_image() (RPA.MSGraph.SharedItem property)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_list_selected">is_list_selected() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_list_selection">is_list_selection() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_location">is_location() (RPA.Browser.Selenium.Selenium method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.is_photo">is_photo() (RPA.MSGraph.SharedItem property)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.is_radio_button_selected">is_radio_button_selected() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
@@ -1682,11 +2097,21 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.list_associations">list_associations() (RPA.Hubspot.Hubspot method)</a>
 </li>
-      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.list_directories_in_directory">list_directories_in_directory() (RPA.FileSystem.FileSystem method)</a>
-</li>
-      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.list_files">list_files() (RPA.FTP.FTP method)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_buckets">list_buckets() (RPA.Cloud.AWS.AWS method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.list_buckets">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.list_directories_in_directory">list_directories_in_directory() (RPA.FileSystem.FileSystem method)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_files">list_files() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.list_files">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+        <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.list_files">(RPA.FTP.FTP method)</a>
+</li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.BaseAdapter.list_files">(RPA.Robocorp.WorkItems.BaseAdapter method)</a>
 </li>
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.FileAdapter.list_files">(RPA.Robocorp.WorkItems.FileAdapter method)</a>
@@ -1700,6 +2125,10 @@
         <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.list_files_in_directory">(RPA.FileSystem.FileSystem method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.list_files_in_onedrive_folder">list_files_in_onedrive_folder() (RPA.MSGraph.MSGraph method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.list_files_in_sharepoint_site_drive">list_files_in_sharepoint_site_drive() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.list_messages">list_messages() (RPA.Email.Exchange.Exchange method)</a>
 
       <ul>
@@ -1718,16 +2147,38 @@
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.list_processes">list_processes() (RPA.Robocorp.Process.Process method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_redshift_databases">list_redshift_databases() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.list_redshift_databases">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_redshift_schemas">list_redshift_schemas() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.list_redshift_schemas">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.list_redshift_tables">list_redshift_tables() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.list_redshift_tables">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.list_run_artifacts">list_run_artifacts() (RPA.Robocorp.Process.Process method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.list_sharepoint_site_drives">list_sharepoint_site_drives() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech.list_supported_voices">list_supported_voices() (RPA.Cloud.Azure.ServiceSpeech method)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.list_unread_messages">list_unread_messages() (RPA.Email.Exchange.Exchange method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.list_work_item_files">list_work_item_files() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.list_work_item_variables">list_work_item_variables() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.list_worksheets">list_worksheets() (RPA.Excel.Files.Files method)</a>
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.load">load() (RPA.Robocorp.Vault.FileSecrets method)</a>
@@ -1748,11 +2199,15 @@
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.RobocorpAdapter.load_payload">(RPA.Robocorp.WorkItems.RobocorpAdapter method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.load_token">load_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.location">location() (RPA.Browser.Selenium.Selenium property)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.location_should_be">location_should_be() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.location_should_contain">location_should_contain() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+</li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.lock">lock() (RPA.Email.Exchange.OAuth2Creds property)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.lock_screen">lock_screen() (RPA.Desktop.Windows.Windows method)</a>
 </li>
@@ -1774,8 +2229,26 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.log_title">log_title() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
-      <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.logger">logger (RPA.Cloud.Azure.AzureBase attribute)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.logger">logger (RPA.Cloud.AWS.AWS attribute)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase.logger">(RPA.Cloud.AWS.AWSBase attribute)</a>
 </li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.logger">(RPA.Cloud.AWS.ServiceComprehend attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.logger">(RPA.Cloud.AWS.ServiceRedshiftData attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.logger">(RPA.Cloud.AWS.ServiceS3 attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.logger">(RPA.Cloud.AWS.ServiceSQS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.logger">(RPA.Cloud.AWS.ServiceSTS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.logger">(RPA.Cloud.AWS.ServiceTextract attribute)</a>
+</li>
+        <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.logger">(RPA.Cloud.Azure.AzureBase attribute)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.login">login() (RPA.Netsuite.Netsuite method)</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.RGB.luminance">luminance() (RPA.Images.RGB method)</a>
@@ -1789,6 +2262,8 @@
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.mailbox_to_email_address">mailbox_to_email_address() (in module RPA.Email.Exchange)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.make_datum">make_datum() (RPA.JSON.RPAFilter method)</a>
+</li>
+      <li><a href="libraries/tables/python.html#RPA.Tables.Tables.map_column_values">map_column_values() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.mark_as_read">mark_as_read() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
@@ -1808,6 +2283,8 @@
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.merge_tables">merge_tables() (RPA.Tables.Tables method)</a>
 </li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.MFA">MFA (class in RPA.MFA)</a>
+</li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.minimize_dialog">minimize_dialog() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.mkd">mkd() (RPA.FTP.FTP method)</a>
@@ -1819,6 +2296,8 @@
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.mouse_click_coords">mouse_click_coords() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.mouse_click_image">mouse_click_image() (RPA.Desktop.Windows.Windows method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.move">move() (RPA.MSGraph.SharedItem method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.move_directory">move_directory() (RPA.FileSystem.FileSystem method)</a>
 </li>
@@ -1862,7 +2341,13 @@
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.Action.msg_unread">msg_unread (RPA.Email.ImapSmtp.Action attribute)</a>
 </li>
-      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.mtime">mtime() (RPA.FileSystem.File property)</a>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph">MSGraph (class in RPA.MSGraph)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraphAuthenticationError">MSGraphAuthenticationError</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraphDownloadError">MSGraphDownloadError</a>
+</li>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.mtime">mtime (RPA.FileSystem.File attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1870,20 +2355,22 @@
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.name">name (RPA.JavaAccessBridge.JavaElement attribute)</a>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.Directory.name">name (RPA.FileSystem.Directory attribute)</a>
 
       <ul>
+        <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.name">(RPA.FileSystem.File attribute)</a>
+</li>
+        <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.name">(RPA.JavaAccessBridge.JavaElement attribute)</a>
+</li>
         <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.name">(RPA.Twitter.Tweet attribute)</a>
 </li>
       </ul></li>
-      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.Directory.name">name() (RPA.FileSystem.Directory property)</a>
-
-      <ul>
-        <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.name">(RPA.FileSystem.File property)</a>
+      <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.name">name() (RPA.Robocorp.Vault.Secret property)</a>
 </li>
-        <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.name">(RPA.Robocorp.Vault.Secret property)</a>
+      <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets">Nanonets (class in RPA.DocumentAI.Nanonets)</a>
 </li>
-      </ul></li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.EngineName.NANONETS">NANONETS (RPA.DocumentAI.DocumentAI.EngineName attribute)</a>
+</li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite">Netsuite (class in RPA.Netsuite)</a>
 </li>
       <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.netsuite_get">netsuite_get() (RPA.Netsuite.Netsuite method)</a>
@@ -1898,9 +2385,13 @@
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.new_query">new_query() (RPA.MSGraph.SharedItem method)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.node">node (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.NoRecipientsError">NoRecipientsError</a>
+</li>
+      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.normalize_options">normalize_options() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.normalize_path">normalize_path() (RPA.FileSystem.FileSystem method)</a>
 </li>
@@ -1926,6 +2417,14 @@
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds">OAuth2Creds (class in RPA.Email.Exchange)</a>
+</li>
+      <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.ocr_fulltext">ocr_fulltext() (RPA.DocumentAI.Nanonets.Nanonets method)</a>
+</li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.on_token_auto_refreshed">on_token_auto_refreshed() (RPA.Email.Exchange.OAuth2Creds method)</a>
+</li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.on_token_refresh">on_token_refresh() (RPA.Email.Exchange.Exchange method)</a>
+</li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.open">open() (RPA.Excel.Files.XlsWorkbook method)</a>
 
       <ul>
@@ -1954,14 +2453,14 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.open_executable">open_executable() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.open_file">open_file() (RPA.Desktop.Windows.Windows method)</a>
 
       <ul>
         <li><a href="libraries/word_application/python.html#RPA.Word.Application.Application.open_file">(RPA.Word.Application.Application method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.open_from_search">open_from_search() (RPA.Desktop.Windows.Windows method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.open_headless_chrome_browser">open_headless_chrome_browser() (RPA.Browser.Selenium.Selenium method)</a>
@@ -1985,6 +2484,8 @@
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.options_on_session">options_on_session() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.options_request">options_request() (RPA.HTTP.HTTP method)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.OTPMode">OTPMode (class in RPA.MFA)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.FileAdapter.output_path">output_path() (RPA.Robocorp.WorkItems.FileAdapter property)</a>
 </li>
@@ -2062,10 +2563,10 @@
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAJsonPathParser.p_sorts_sort">p_sorts_sort() (RPA.JSON.RPAJsonPathParser method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault.params">params() (RPA.Robocorp.Vault.RobocorpVault property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/json/python.html#RPA.JSON.parse">parse() (in module RPA.JSON)</a>
 
       <ul>
@@ -2082,12 +2583,14 @@
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.patch_request">patch_request() (RPA.HTTP.HTTP method)</a>
 </li>
-      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.Directory.path">path() (RPA.FileSystem.Directory property)</a>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.Directory.path">path (RPA.FileSystem.Directory attribute)</a>
 
       <ul>
-        <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.path">(RPA.FileSystem.File property)</a>
+        <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.path">(RPA.FileSystem.File attribute)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.PATH_TYPE">PATH_TYPE (RPA.FileSystem.FileSystem attribute)</a>
+</li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItem.payload">payload() (RPA.Robocorp.WorkItems.WorkItem property)</a>
 </li>
       <li><a href="libraries/pdf/python.html#RPA.PDF.PDF">PDF (class in RPA.PDF)</a>
@@ -2103,6 +2606,10 @@
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.post_request">post_request() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAJsonPathParser.precedence">precedence (RPA.JSON.RPAJsonPathParser attribute)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.predict">predict() (RPA.DocumentAI.DocumentAI.DocumentAI method)</a>
+</li>
+      <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.predict_file">predict_file() (RPA.DocumentAI.Nanonets.Nanonets method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.press_keys">press_keys() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
@@ -2146,10 +2653,14 @@
 <h2 id="Q">Q</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.q">q() (RPA.MSGraph.SharedItem method)</a>
+</li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.query">query() (RPA.Database.Database method)</a>
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.quit">quit() (RPA.FTP.FTP method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.quit_application">quit_application() (RPA.Desktop.Windows.Windows method)</a>
 
       <ul>
@@ -2174,6 +2685,8 @@
 </li>
       <li><a href="libraries/excel_application/python.html#RPA.Excel.Application.Application.read_from_cells">read_from_cells() (RPA.Excel.Application.Application method)</a>
 </li>
+      <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.read_only">read_only() (RPA.Excel.Files.XlsxWorkbook property)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.read_table">read_table() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.read_table_from_csv">read_table_from_csv() (RPA.Tables.Tables method)</a>
@@ -2188,12 +2701,42 @@
       </ul></li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.read_worksheet_as_table">read_worksheet_as_table() (RPA.Excel.Files.Files method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.receive_message">receive_message() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.receive_message">(RPA.Cloud.AWS.ServiceSQS method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/images/python.html#RPA.Images.RGB.red">red (RPA.Images.RGB attribute)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.RedshiftDatabaseError">RedshiftDatabaseError</a>
+</li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.refresh">refresh() (RPA.Email.Exchange.OAuth2Creds method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.refresh_oauth_token">refresh_oauth_token() (RPA.MSGraph.MSGraph method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.refresh_window">refresh_window() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-      <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.region">region (RPA.Cloud.Azure.AzureBase attribute)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.region">region (RPA.Cloud.AWS.AWS attribute)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase.region">(RPA.Cloud.AWS.AWSBase attribute)</a>
 </li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.region">(RPA.Cloud.AWS.ServiceComprehend attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.region">(RPA.Cloud.AWS.ServiceRedshiftData attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.region">(RPA.Cloud.AWS.ServiceS3 attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.region">(RPA.Cloud.AWS.ServiceSQS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.region">(RPA.Cloud.AWS.ServiceSTS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.region">(RPA.Cloud.AWS.ServiceTextract attribute)</a>
+</li>
+        <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.region">(RPA.Cloud.Azure.AzureBase attribute)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.register_driver">register_driver() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.register_file_upload">register_file_upload() (RPA.Robocorp.Process.Process method)</a>
@@ -2272,6 +2815,8 @@
       </ul></li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.restore_dialog">restore_dialog() (RPA.Desktop.Windows.Windows method)</a>
 </li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.result">result() (RPA.DocumentAI.DocumentAI.DocumentAI property)</a>
+</li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.retry_work_item">retry_work_item() (RPA.Robocorp.Process.Process method)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.retweet_count">retweet_count (RPA.Twitter.Tweet attribute)</a>
@@ -2284,15 +2829,37 @@
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.robocloud_vault_name">robocloud_vault_name (RPA.Cloud.Azure.AzureBase attribute)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.robocorp_vault_name">robocorp_vault_name (RPA.Cloud.AWS.AWS attribute)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase.robocorp_vault_name">(RPA.Cloud.AWS.AWSBase attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.robocorp_vault_name">(RPA.Cloud.AWS.ServiceComprehend attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.robocorp_vault_name">(RPA.Cloud.AWS.ServiceRedshiftData attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.robocorp_vault_name">(RPA.Cloud.AWS.ServiceS3 attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.robocorp_vault_name">(RPA.Cloud.AWS.ServiceSQS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.robocorp_vault_name">(RPA.Cloud.AWS.ServiceSTS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.robocorp_vault_name">(RPA.Cloud.AWS.ServiceTextract attribute)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.RobocorpAdapter">RobocorpAdapter (class in RPA.Robocorp.WorkItems)</a>
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVault">RobocorpVault (class in RPA.Robocorp.Vault)</a>
 </li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError">RobocorpVaultError</a>
 </li>
-      <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.ROBOT_AUTO_KEYWORDS">ROBOT_AUTO_KEYWORDS (RPA.Hubspot.Hubspot attribute)</a>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend">RobocorpVaultTokenBackend (class in RPA.MSGraph)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.ROBOT_AUTO_KEYWORDS">ROBOT_AUTO_KEYWORDS (RPA.DocumentAI.DocumentAI.DocumentAI attribute)</a>
 
       <ul>
+        <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.ROBOT_AUTO_KEYWORDS">(RPA.Hubspot.Hubspot attribute)</a>
+</li>
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.ROBOT_AUTO_KEYWORDS">(RPA.JavaAccessBridge.JavaAccessBridge attribute)</a>
 </li>
         <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.ROBOT_AUTO_KEYWORDS">(RPA.Robocorp.Process.Process attribute)</a>
@@ -2305,7 +2872,11 @@
       <ul>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Browser.Selenium.Selenium attribute)</a>
 </li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Cloud.AWS.AWS attribute)</a>
+</li>
         <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.Azure.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Cloud.Azure.Azure attribute)</a>
+</li>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Cloud.Google.Google attribute)</a>
 </li>
         <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Crypto.Crypto attribute)</a>
 </li>
@@ -2318,6 +2889,12 @@
         <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Desktop.OperatingSystem.OperatingSystem attribute)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Desktop.Windows.Windows attribute)</a>
+</li>
+        <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.ROBOT_LIBRARY_DOC_FORMAT">(RPA.DocumentAI.Base64AI.Base64AI attribute)</a>
+</li>
+        <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.ROBOT_LIBRARY_DOC_FORMAT">(RPA.DocumentAI.DocumentAI.DocumentAI attribute)</a>
+</li>
+        <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.ROBOT_LIBRARY_DOC_FORMAT">(RPA.DocumentAI.Nanonets.Nanonets attribute)</a>
 </li>
         <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Email.Exchange.Exchange attribute)</a>
 </li>
@@ -2340,6 +2917,10 @@
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.ROBOT_LIBRARY_DOC_FORMAT">(RPA.JavaAccessBridge.JavaAccessBridge attribute)</a>
 </li>
         <li><a href="libraries/json/python.html#RPA.JSON.JSON.ROBOT_LIBRARY_DOC_FORMAT">(RPA.JSON.JSON attribute)</a>
+</li>
+        <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.ROBOT_LIBRARY_DOC_FORMAT">(RPA.MFA.MFA attribute)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.ROBOT_LIBRARY_DOC_FORMAT">(RPA.MSGraph.MSGraph attribute)</a>
 </li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.ROBOT_LIBRARY_DOC_FORMAT">(RPA.Netsuite.Netsuite attribute)</a>
 </li>
@@ -2375,7 +2956,11 @@
       <ul>
         <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.ROBOT_LIBRARY_SCOPE">(RPA.Browser.Selenium.Selenium attribute)</a>
 </li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.ROBOT_LIBRARY_SCOPE">(RPA.Cloud.AWS.AWS attribute)</a>
+</li>
         <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.Azure.ROBOT_LIBRARY_SCOPE">(RPA.Cloud.Azure.Azure attribute)</a>
+</li>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.ROBOT_LIBRARY_SCOPE">(RPA.Cloud.Google.Google attribute)</a>
 </li>
         <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.ROBOT_LIBRARY_SCOPE">(RPA.Crypto.Crypto attribute)</a>
 </li>
@@ -2388,6 +2973,12 @@
         <li><a href="libraries/desktop_operatingsystem/python.html#RPA.Desktop.OperatingSystem.OperatingSystem.ROBOT_LIBRARY_SCOPE">(RPA.Desktop.OperatingSystem.OperatingSystem attribute)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.ROBOT_LIBRARY_SCOPE">(RPA.Desktop.Windows.Windows attribute)</a>
+</li>
+        <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.ROBOT_LIBRARY_SCOPE">(RPA.DocumentAI.Base64AI.Base64AI attribute)</a>
+</li>
+        <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.ROBOT_LIBRARY_SCOPE">(RPA.DocumentAI.DocumentAI.DocumentAI attribute)</a>
+</li>
+        <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.ROBOT_LIBRARY_SCOPE">(RPA.DocumentAI.Nanonets.Nanonets attribute)</a>
 </li>
         <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.ROBOT_LIBRARY_SCOPE">(RPA.Email.Exchange.Exchange attribute)</a>
 </li>
@@ -2410,6 +3001,10 @@
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.ROBOT_LIBRARY_SCOPE">(RPA.JavaAccessBridge.JavaAccessBridge attribute)</a>
 </li>
         <li><a href="libraries/json/python.html#RPA.JSON.JSON.ROBOT_LIBRARY_SCOPE">(RPA.JSON.JSON attribute)</a>
+</li>
+        <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.ROBOT_LIBRARY_SCOPE">(RPA.MFA.MFA attribute)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.ROBOT_LIBRARY_SCOPE">(RPA.MSGraph.MSGraph attribute)</a>
 </li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.Netsuite.ROBOT_LIBRARY_SCOPE">(RPA.Netsuite.Netsuite attribute)</a>
 </li>
@@ -2454,7 +3049,11 @@
 </li>
       <li><a href="libraries/browser_selenium/python.html#module-RPA.Browser.Selenium">RPA.Browser.Selenium (module)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#module-RPA.Cloud.AWS">RPA.Cloud.AWS (module)</a>
+</li>
       <li><a href="libraries/cloud_azure/python.html#module-RPA.Cloud.Azure">RPA.Cloud.Azure (module)</a>
+</li>
+      <li><a href="libraries/cloud_google/python.html#module-RPA.Cloud.Google">RPA.Cloud.Google (module)</a>
 </li>
       <li><a href="libraries/crypto/python.html#module-RPA.Crypto">RPA.Crypto (module)</a>
 </li>
@@ -2469,6 +3068,12 @@
       <li><a href="libraries/desktop_windows/python.html#module-RPA.Desktop.Windows">RPA.Desktop.Windows (module)</a>
 </li>
       <li><a href="libraries/dialogs/python.html#module-RPA.Dialogs">RPA.Dialogs (module)</a>
+</li>
+      <li><a href="libraries/documentai_base64ai/python.html#module-RPA.DocumentAI.Base64AI">RPA.DocumentAI.Base64AI (module)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#module-RPA.DocumentAI.DocumentAI">RPA.DocumentAI.DocumentAI (module)</a>
+</li>
+      <li><a href="libraries/documentai_nanonets/python.html#module-RPA.DocumentAI.Nanonets">RPA.DocumentAI.Nanonets (module)</a>
 </li>
       <li><a href="libraries/email_exchange/python.html#module-RPA.Email.Exchange">RPA.Email.Exchange (module)</a>
 </li>
@@ -2491,6 +3096,10 @@
       <li><a href="libraries/javaaccessbridge/python.html#module-RPA.JavaAccessBridge">RPA.JavaAccessBridge (module)</a>
 </li>
       <li><a href="libraries/json/python.html#module-RPA.JSON">RPA.JSON (module)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#module-RPA.MFA">RPA.MFA (module)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#module-RPA.MSGraph">RPA.MSGraph (module)</a>
 </li>
       <li><a href="libraries/netsuite/python.html#module-RPA.Netsuite">RPA.Netsuite (module)</a>
 </li>
@@ -2529,6 +3138,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.run_keyword">run_keyword() (RPA.Browser.Selenium.Selenium method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_google/python.html#RPA.Cloud.Google.Google.run_keyword">(RPA.Cloud.Google.Google method)</a>
+</li>
         <li><a href="libraries/desktop/python.html#RPA.Desktop.Desktop.run_keyword">(RPA.Desktop.Desktop method)</a>
 </li>
         <li><a href="libraries/pdf/python.html#RPA.PDF.PDF.run_keyword">(RPA.PDF.PDF method)</a>
@@ -2557,6 +3168,8 @@
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceAuthenticationError">SalesforceAuthenticationError</a>
 </li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDataNotAnDictionary">SalesforceDataNotAnDictionary</a>
+</li>
+      <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDomainChangeError">SalesforceDomainChangeError</a>
 </li>
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP">SAP (class in RPA.SAP)</a>
 </li>
@@ -2602,11 +3215,19 @@
         <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.RobocorpAdapter.save_payload">(RPA.Robocorp.WorkItems.RobocorpAdapter method)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.save_token">save_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
+</li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.save_work_item">save_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
 </li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.Files.save_workbook">save_workbook() (RPA.Excel.Files.Files method)</a>
 </li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.scan_document_file">scan_document_file() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+</li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.scan_document_url">scan_document_url() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+</li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.schemas">schemas() (RPA.Hubspot.Hubspot property)</a>
+</li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.scope">scope() (RPA.Email.Exchange.OAuth2Creds property)</a>
 </li>
       <li><a href="libraries/twitter/python.html#RPA.Twitter.Tweet.screen_name">screen_name (RPA.Twitter.Tweet attribute)</a>
 </li>
@@ -2619,6 +3240,8 @@
       <li><a href="libraries/sap/python.html#RPA.SAP.SAP.scroll">scroll() (RPA.SAP.SAP method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.search_for_objects">search_for_objects() (RPA.Hubspot.Hubspot method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.search_for_users">search_for_users() (RPA.MSGraph.MSGraph method)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.SearchLexer">SearchLexer (class in RPA.Hubspot)</a>
 </li>
@@ -2658,9 +3281,13 @@
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.send_keys_to_input">send_keys_to_input() (RPA.Desktop.Windows.Windows method)</a>
 </li>
-      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.send_message">send_message() (RPA.Email.Exchange.Exchange method)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.send_message">send_message() (RPA.Cloud.AWS.AWS method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.send_message">(RPA.Cloud.AWS.ServiceSQS method)</a>
+</li>
+        <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.Exchange.send_message">(RPA.Email.Exchange.Exchange method)</a>
+</li>
         <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.send_message">(RPA.Email.ImapSmtp.ImapSmtp method)</a>
 </li>
         <li><a href="libraries/outlook_application/python.html#RPA.Outlook.Application.Application.send_message">(RPA.Outlook.Application.Application method)</a>
@@ -2672,17 +3299,49 @@
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceTextAnalytics.sentiment_analyze">sentiment_analyze() (RPA.Cloud.Azure.ServiceTextAnalytics method)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.serializer">serializer (RPA.MSGraph.RobocorpVaultTokenBackend attribute)</a>
+</li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.FileSecrets.SERIALIZERS">SERIALIZERS (RPA.Robocorp.Vault.FileSecrets attribute)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend">ServiceComprehend (class in RPA.Cloud.AWS)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceComputerVision">ServiceComputerVision (class in RPA.Cloud.Azure)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceFace">ServiceFace (class in RPA.Cloud.Azure)</a>
 </li>
-      <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.services">services (RPA.Cloud.Azure.AzureBase attribute)</a>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData">ServiceRedshiftData (class in RPA.Cloud.AWS)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.services">services (RPA.Cloud.AWS.AWS attribute)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase.services">(RPA.Cloud.AWS.AWSBase attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.services">(RPA.Cloud.AWS.ServiceComprehend attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.services">(RPA.Cloud.AWS.ServiceRedshiftData attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.services">(RPA.Cloud.AWS.ServiceS3 attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.services">(RPA.Cloud.AWS.ServiceSQS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.services">(RPA.Cloud.AWS.ServiceSTS attribute)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.services">(RPA.Cloud.AWS.ServiceTextract attribute)</a>
+</li>
+        <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.services">(RPA.Cloud.Azure.AzureBase attribute)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3">ServiceS3 (class in RPA.Cloud.AWS)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech">ServiceSpeech (class in RPA.Cloud.Azure)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS">ServiceSQS (class in RPA.Cloud.AWS)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS">ServiceSTS (class in RPA.Cloud.AWS)</a>
+</li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceTextAnalytics">ServiceTextAnalytics (class in RPA.Cloud.Azure)</a>
+</li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract">ServiceTextract (class in RPA.Cloud.AWS)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.session_exists">session_exists() (RPA.HTTP.HTTP method)</a>
 </li>
@@ -2718,14 +3377,22 @@
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.set_association">set_association() (RPA.Hubspot.Hubspot method)</a>
 </li>
+      <li><a href="libraries/documentai_base64ai/python.html#RPA.DocumentAI.Base64AI.Base64AI.set_authorization">set_authorization() (RPA.DocumentAI.Base64AI.Base64AI method)</a>
+
+      <ul>
+        <li><a href="libraries/documentai_nanonets/python.html#RPA.DocumentAI.Nanonets.Nanonets.set_authorization">(RPA.DocumentAI.Nanonets.Nanonets method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/database/python.html#RPA.Database.Database.set_auto_commit">set_auto_commit() (RPA.Database.Database method)</a>
-</li>
-      <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.set_automation_speed">set_automation_speed() (RPA.Desktop.Windows.Windows method)</a>
-</li>
-      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.set_binary_mode">set_binary_mode() (RPA.FTP.FTP method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.set_automation_speed">set_automation_speed() (RPA.Desktop.Windows.Windows method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.set_base_url">set_base_url() (RPA.MSGraph.SharedItem method)</a>
+</li>
+      <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.set_binary_mode">set_binary_mode() (RPA.FTP.FTP method)</a>
+</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_browser_implicit_wait">set_browser_implicit_wait() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.set_cell">set_cell() (RPA.Tables.Table method)</a>
@@ -2750,6 +3417,8 @@
       </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.set_column">set_column() (RPA.Tables.Table method)</a>
 </li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.set_counter_based_otp">set_counter_based_otp() (RPA.MFA.MFA method)</a>
+</li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.ImapSmtp.set_credentials">set_credentials() (RPA.Email.ImapSmtp.ImapSmtp method)</a>
 
       <ul>
@@ -2767,6 +3436,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.set_default_url_scheme">set_default_url_scheme() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.set_display_scale_factor">set_display_scale_factor() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
+</li>
+      <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.set_domain">set_domain() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.Selenium.set_download_directory">set_download_directory() (RPA.Browser.Selenium.Selenium method)</a>
 </li>
@@ -2786,6 +3457,24 @@
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.set_robocloud_vault">set_robocloud_vault() (RPA.Cloud.Azure.AzureBase method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.set_robocorp_vault">set_robocorp_vault() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWSBase.set_robocorp_vault">(RPA.Cloud.AWS.AWSBase method)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceComprehend.set_robocorp_vault">(RPA.Cloud.AWS.ServiceComprehend method)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceRedshiftData.set_robocorp_vault">(RPA.Cloud.AWS.ServiceRedshiftData method)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.set_robocorp_vault">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSQS.set_robocorp_vault">(RPA.Cloud.AWS.ServiceSQS method)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceSTS.set_robocorp_vault">(RPA.Cloud.AWS.ServiceSTS method)</a>
+</li>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.set_robocorp_vault">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Table.set_row">set_row() (RPA.Tables.Table method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.set_row_as_column_names">set_row_as_column_names() (RPA.Tables.Tables method)</a>
@@ -2813,6 +3502,8 @@
       <li><a href="libraries/tables/python.html#RPA.Tables.Tables.set_table_row">set_table_row() (RPA.Tables.Tables method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.WorkItems.set_task_variables_from_work_item">set_task_variables_from_work_item() (RPA.Robocorp.WorkItems.WorkItems method)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.set_time_based_otp">set_time_based_otp() (RPA.MFA.MFA method)</a>
 </li>
       <li><a href="libraries/database/python.html#RPA.Database.Configuration.set_val">set_val() (RPA.Database.Configuration method)</a>
 </li>
@@ -2850,24 +3541,32 @@
 </li>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Hash.SHA512_256">SHA512_256 (RPA.Crypto.Hash attribute)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.share_with_invite">share_with_invite() (RPA.MSGraph.SharedItem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.share_with_link">share_with_link() (RPA.MSGraph.SharedItem method)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem">SharedItem (class in RPA.MSGraph)</a>
+</li>
       <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.sheetnames">sheetnames() (RPA.Excel.Files.XlsWorkbook property)</a>
 
       <ul>
         <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.sheetnames">(RPA.Excel.Files.XlsxWorkbook property)</a>
 </li>
       </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.should_refresh_token">should_refresh_token() (RPA.MSGraph.RobocorpVaultTokenBackend method)</a>
+</li>
       <li><a href="libraries/images/python.html#RPA.Images.Images.show_region_in_image">show_region_in_image() (RPA.Images.Images method)</a>
 </li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaAccessBridge.shutdown_jab">shutdown_jab() (RPA.JavaAccessBridge.JavaAccessBridge method)</a>
 </li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.sig">sig() (RPA.Email.Exchange.OAuth2Creds method)</a>
+</li>
       <li><a href="libraries/windows/python.html#RPA.Windows.Windows.SIMULATE_MOVE">SIMULATE_MOVE (RPA.Windows.Windows attribute)</a>
 </li>
-      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.size">size() (RPA.FileSystem.File property)</a>
-
-      <ul>
-        <li><a href="libraries/tables/python.html#RPA.Tables.Table.size">(RPA.Tables.Table property)</a>
+      <li><a href="libraries/filesystem/python.html#RPA.FileSystem.File.size">size (RPA.FileSystem.File attribute)</a>
 </li>
-      </ul></li>
+      <li><a href="libraries/tables/python.html#RPA.Tables.Table.size">size() (RPA.Tables.Table property)</a>
+</li>
       <li><a href="libraries/slack/python.html#RPA.Slack.Slack">Slack (class in RPA.Slack)</a>
 </li>
       <li><a href="libraries/slack/python.html#RPA.Slack.Slack.slack_message_using_webhook">slack_message_using_webhook() (RPA.Slack.Slack method)</a>
@@ -2884,6 +3583,18 @@
 </li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.start_configured_process">start_configured_process() (RPA.Robocorp.Process.Process method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.start_document_analysis">start_document_analysis() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.start_document_analysis">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.start_document_text_detection">start_document_text_detection() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceTextract.start_document_text_detection">(RPA.Cloud.AWS.ServiceTextract method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.start_process">start_process() (RPA.Robocorp.Process.Process method)</a>
 </li>
       <li><a href="libraries/robocorp_workitems/python.html#RPA.Robocorp.WorkItems.State">State (class in RPA.Robocorp.WorkItems)</a>
@@ -2896,9 +3607,9 @@
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.status_should_be">status_should_be() (RPA.HTTP.HTTP method)</a>
 </li>
-      <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.suppress_logging">suppress_logging() (in module RPA.Browser.Selenium)</a>
-</li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.switch_browser">switch_browser() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
+</li>
+      <li><a href="libraries/documentai/python.html#RPA.DocumentAI.DocumentAI.DocumentAI.switch_engine">switch_engine() (RPA.DocumentAI.DocumentAI.DocumentAI method)</a>
 </li>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.Windows.switch_to_application">switch_to_application() (RPA.Desktop.Windows.Windows method)</a>
 </li>
@@ -2932,11 +3643,15 @@
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceSpeech.text_to_speech">text_to_speech() (RPA.Cloud.Azure.ServiceSpeech method)</a>
 </li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.OTPMode.TIME">TIME (RPA.MFA.OTPMode attribute)</a>
+</li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.TimeoutException">TimeoutException</a>
 </li>
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserManagementKeywordsOverride.title_should_be">title_should_be() (RPA.Browser.Selenium.BrowserManagementKeywordsOverride method)</a>
 </li>
       <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.to_action">to_action() (in module RPA.Email.ImapSmtp)</a>
+</li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.to_attachment_position">to_attachment_position() (in module RPA.Email.ImapSmtp)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.to_condition">to_condition() (in module RPA.Tables)</a>
 </li>
@@ -2954,8 +3669,6 @@
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.to_image">to_image() (in module RPA.Images)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.to_json">to_json() (RPA.HTTP.HTTP method)</a>
 </li>
       <li><a href="libraries/tables/python.html#RPA.Tables.to_list">to_list() (in module RPA.Tables)</a>
@@ -2964,6 +3677,8 @@
         <li><a href="libraries/tables/python.html#RPA.Tables.Table.to_list">(RPA.Tables.Table method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.to_speed">to_speed() (in module RPA.Desktop.Windows)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.to_str">to_str() (RPA.Hubspot.ExtendedFilter method)</a>
@@ -2972,13 +3687,23 @@
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.token">token (RPA.Cloud.Azure.AzureBase attribute)</a>
 </li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.token">token() (RPA.MSGraph.RobocorpVaultTokenBackend property)</a>
+</li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.RobocorpVaultTokenBackend.token_constructor">token_constructor (RPA.MSGraph.RobocorpVaultTokenBackend attribute)</a>
+</li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.TOKEN_LIFESPAN">TOKEN_LIFESPAN (RPA.Cloud.Azure.AzureBase attribute)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.AzureBase.token_time">token_time (RPA.Cloud.Azure.AzureBase attribute)</a>
 </li>
+      <li><a href="libraries/email_exchange/python.html#RPA.Email.Exchange.OAuth2Creds.token_url">token_url() (RPA.Email.Exchange.OAuth2Creds property)</a>
+</li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAJsonPathParser.tokens">tokens (RPA.JSON.RPAJsonPathParser attribute)</a>
 </li>
       <li><a href="libraries/images/python.html#RPA.Images.TemplateMatcher.tolerance">tolerance() (RPA.Images.TemplateMatcher property)</a>
+</li>
+      <li><a href="libraries/email_imapsmtp/python.html#RPA.Email.ImapSmtp.AttachmentPosition.TOP">TOP (RPA.Email.ImapSmtp.AttachmentPosition attribute)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.TOTPNotSetError">TOTPNotSetError</a>
 </li>
       <li><a href="libraries/filesystem/python.html#RPA.FileSystem.FileSystem.touch_file">touch_file() (RPA.FileSystem.FileSystem method)</a>
 </li>
@@ -3029,15 +3754,17 @@
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.update">update() (RPA.JSON.RPAFilter method)</a>
 
       <ul>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.SharedItem.update">(RPA.MSGraph.SharedItem method)</a>
+</li>
         <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Secret.update">(RPA.Robocorp.Vault.Secret method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.Hubspot.update_object">update_object() (RPA.Hubspot.Hubspot method)</a>
 </li>
       <li><a href="libraries/json/python.html#RPA.JSON.RPAFilter.update_or_create">update_or_create() (RPA.JSON.RPAFilter method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.update_salesforce_object">update_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/http/python.html#RPA.HTTP.HTTP.update_session">update_session() (RPA.HTTP.HTTP method)</a>
@@ -3046,13 +3773,29 @@
 </li>
       <li><a href="libraries/ftp/python.html#RPA.FTP.FTP.upload">upload() (RPA.FTP.FTP method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.upload_file">upload_file() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.upload_file">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
+      <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraph.upload_file_to_onedrive">upload_file_to_onedrive() (RPA.MSGraph.MSGraph method)</a>
+</li>
       <li><a href="libraries/robocorp_process/python.html#RPA.Robocorp.Process.Process.upload_file_to_s3">upload_file_to_s3() (RPA.Robocorp.Process.Process method)</a>
 </li>
+      <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.AWS.upload_files">upload_files() (RPA.Cloud.AWS.AWS method)</a>
+
+      <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.ServiceS3.upload_files">(RPA.Cloud.AWS.ServiceS3 method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/salesforce/python.html#RPA.Salesforce.Salesforce.upsert_salesforce_object">upsert_salesforce_object() (RPA.Salesforce.Salesforce method)</a>
 </li>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.use_encryption_key">use_encryption_key() (RPA.Crypto.Crypto method)</a>
 </li>
       <li><a href="libraries/crypto/python.html#RPA.Crypto.Crypto.use_encryption_key_from_vault">use_encryption_key_from_vault() (RPA.Crypto.Crypto method)</a>
+</li>
+      <li><a href="libraries/mfa/python.html#RPA.MFA.MFA.use_mfa_secret_from_vault">use_mfa_secret_from_vault() (RPA.MFA.MFA method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -3060,6 +3803,12 @@
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsWorkbook.validate_content">validate_content() (RPA.Excel.Files.XlsWorkbook method)</a>
+
+      <ul>
+        <li><a href="libraries/excel_files/python.html#RPA.Excel.Files.XlsxWorkbook.validate_content">(RPA.Excel.Files.XlsxWorkbook method)</a>
+</li>
+      </ul></li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.value">value() (RPA.Hubspot.ExtendedFilter property)</a>
 </li>
       <li><a href="libraries/hubspot/python.html#RPA.Hubspot.ExtendedFilter.values">values() (RPA.Hubspot.ExtendedFilter property)</a>
@@ -3070,10 +3819,10 @@
       </ul></li>
       <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.Vault">Vault (class in RPA.Robocorp.Vault)</a>
 </li>
-      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible">visible (RPA.JavaAccessBridge.JavaElement attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible">visible (RPA.JavaAccessBridge.JavaElement attribute)</a>
+</li>
       <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaElement.visible_children">visible_children (RPA.JavaAccessBridge.JavaElement attribute)</a>
 </li>
       <li><a href="libraries/cloud_azure/python.html#RPA.Cloud.Azure.ServiceComputerVision.vision_analyze">vision_analyze() (RPA.Cloud.Azure.ServiceComputerVision method)</a>
@@ -3129,6 +3878,8 @@
       <li><a href="libraries/browser_selenium/python.html#RPA.Browser.Selenium.BrowserNotFoundError.with_traceback">with_traceback() (RPA.Browser.Selenium.BrowserNotFoundError method)</a>
 
       <ul>
+        <li><a href="libraries/cloud_aws/python.html#RPA.Cloud.AWS.RedshiftDatabaseError.with_traceback">(RPA.Cloud.AWS.RedshiftDatabaseError method)</a>
+</li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.ApplicationNotStarted.with_traceback">(RPA.Desktop.Windows.ApplicationNotStarted method)</a>
 </li>
         <li><a href="libraries/desktop_windows/python.html#RPA.Desktop.Windows.ElementNotFoundError.with_traceback">(RPA.Desktop.Windows.ElementNotFoundError method)</a>
@@ -3167,6 +3918,14 @@
 </li>
         <li><a href="libraries/javaaccessbridge/python.html#RPA.JavaAccessBridge.JavaWindowNotFound.with_traceback">(RPA.JavaAccessBridge.JavaWindowNotFound method)</a>
 </li>
+        <li><a href="libraries/mfa/python.html#RPA.MFA.HOTPNotSetError.with_traceback">(RPA.MFA.HOTPNotSetError method)</a>
+</li>
+        <li><a href="libraries/mfa/python.html#RPA.MFA.TOTPNotSetError.with_traceback">(RPA.MFA.TOTPNotSetError method)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraphAuthenticationError.with_traceback">(RPA.MSGraph.MSGraphAuthenticationError method)</a>
+</li>
+        <li><a href="libraries/msgraph/python.html#RPA.MSGraph.MSGraphDownloadError.with_traceback">(RPA.MSGraph.MSGraphDownloadError method)</a>
+</li>
         <li><a href="libraries/netsuite/python.html#RPA.Netsuite.NetsuiteAuthenticationError.with_traceback">(RPA.Netsuite.NetsuiteAuthenticationError method)</a>
 </li>
         <li><a href="libraries/robocorp_vault/python.html#RPA.Robocorp.Vault.RobocorpVaultError.with_traceback">(RPA.Robocorp.Vault.RobocorpVaultError method)</a>
@@ -3176,6 +3935,8 @@
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceAuthenticationError.with_traceback">(RPA.Salesforce.SalesforceAuthenticationError method)</a>
 </li>
         <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDataNotAnDictionary.with_traceback">(RPA.Salesforce.SalesforceDataNotAnDictionary method)</a>
+</li>
+        <li><a href="libraries/salesforce/python.html#RPA.Salesforce.SalesforceDomainChangeError.with_traceback">(RPA.Salesforce.SalesforceDomainChangeError method)</a>
 </li>
       </ul></li>
   </ul></td>

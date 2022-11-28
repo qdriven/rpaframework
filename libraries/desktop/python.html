@@ -119,6 +119,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dialogs/index.html">Dialogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
@@ -130,6 +133,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
@@ -226,7 +231,7 @@
 <span id="desktop"></span><h2>Desktop<a class="headerlink" href="#module-RPA.Desktop" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="RPA.Desktop.Desktop">
-<em class="property">class </em><code class="sig-prename descclassname">RPA.Desktop.</code><code class="sig-name descname">Desktop</code><a class="headerlink" href="#RPA.Desktop.Desktop" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">RPA.Desktop.</code><code class="sig-name descname">Desktop</code><span class="sig-paren">(</span><em class="sig-param">locators_path: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Desktop.Desktop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">robotlibcore.DynamicCore</span></code></p>
 <p><cite>Desktop</cite> is a cross-platform library for navigating and interacting with
 desktop environments. It can be used to automate applications through
@@ -374,7 +379,12 @@ all of the required fields and various bits of metadata. This enables
 having one source of truth, which can be updated if a website’s or applications’s
 UI changes. Robot Framework scripts can then only contain a reference
 to a stored locator by name.</p>
-<p>The main way to create named locators is with <a class="reference external" href="https://robocorp.com/docs/product-manuals/robocorp-lab/robocorp-lab-overview">Robocorp Lab</a>.</p>
+<p>The main way to create named locators is with <a class="reference external" href="https://robocorp.com/docs/developer-tools/visual-studio-code/overview">VSCode</a>.</p>
+<p>Read more on identifying elements and crafting locators:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://robocorp.com/docs/development-guide/desktop">Desktop automation and RPA</a></p></li>
+<li><p><a class="reference external" href="https://robocorp.com/docs/development-guide/desktop/how-to-find-user-interface-elements-using-locators-and-keyboard-shortcuts-in-windows-applications">How to find user interface elements using locators and keyboard shortcuts in Windows applications</a></p></li>
+</ul>
 <p><strong>Keyboard and mouse</strong></p>
 <p>Keyboard keywords can emulate typing text, but also pressing various function keys.
 The name of a key is case-insensitive and spaces will be converted to underscores,

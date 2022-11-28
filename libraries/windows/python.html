@@ -116,6 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dialogs/index.html">Dialogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
@@ -127,6 +130,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
@@ -930,7 +935,7 @@ Click   name:Five
 <span class="p">        </span><span class="c">library.send_keys(keys=&quot;96+4=&quot;)</span><span class="p"></span>
 <span class="p">        </span><span class="c">result = library.get_attribute(&quot;id:CalculatorResults&quot;, &quot;Name&quot;)</span><span class="p"></span>
 <span class="p">        </span><span class="c">print(result)</span><span class="p"></span>
-<span class="p">        </span><span class="c">buttons = library.get_elements(&quot;type:Group and name:&quot;Number pad&quot; &gt; type:Button&quot;)</span><span class="p"></span>
+<span class="p">        </span><span class="c">buttons = library.get_elements(&#39;type:Group and name:&quot;Number pad&quot; &gt; type:Button&#39;)</span><span class="p"></span>
 <span class="p">        </span><span class="c">for button in buttons:</span><span class="p"></span>
 <span class="p">            </span><span class="c">print(button)</span><span class="p"></span>
 <span class="p">    </span><span class="c">finally:</span><span class="p"></span>

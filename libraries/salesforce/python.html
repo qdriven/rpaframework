@@ -116,6 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dialogs/index.html">Dialogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
@@ -127,6 +130,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
@@ -226,7 +231,7 @@
 <span id="salesforce"></span><h2>Salesforce<a class="headerlink" href="#module-RPA.Salesforce" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="RPA.Salesforce.Salesforce">
-<em class="property">class </em><code class="sig-prename descclassname">RPA.Salesforce.</code><code class="sig-name descname">Salesforce</code><span class="sig-paren">(</span><em class="sig-param">sandbox: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Salesforce.Salesforce" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">RPA.Salesforce.</code><code class="sig-name descname">Salesforce</code><span class="sig-paren">(</span><em class="sig-param">sandbox: bool = False</em>, <em class="sig-param">domain: str = 'login'</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Salesforce.Salesforce" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p><cite>Salesforce</cite> is a library for accessing Salesforce using REST API.
 The library extends <a class="reference external" href="https://github.com/simple-salesforce/simple-salesforce">simple-salesforce library</a>.</p>
@@ -285,6 +290,33 @@ input object is mapped into <cite>Tilaaja__c</cite> attribute of <cite>Tilaus__c
 <li><p>Get Salesforce Object Metadata</p></li>
 <li><p>Describe Salesforce Object</p></li>
 </ul>
+<p>There are two ways to set the Salesforce domain. You can set the domain at time of
+library import or using the <cite>Set Domain</cite> keyword.</p>
+<p>There are several ways to declare a domain at time of library import:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span><span class="p"></span>
+<span class="kn">Library</span><span class="p">     </span><span class="nn">RPA.Salesforce</span><span class="p">    </span><span class="s">sandbox=</span><span class="p">${</span><span class="nv">TRUE</span><span class="p">}</span>
+</pre></div>
+</div>
+<p>Or using the domain to your Salesforce My domain:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span><span class="p"></span>
+<span class="kn">Library</span><span class="p">     </span><span class="nn">RPA.Salesforce</span><span class="p">    </span><span class="s">domain=&quot;robocorp&quot;</span><span class="p"></span>
+</pre></div>
+</div>
+<p>The domain can also be set using the keyword <cite>Set Domain</cite>:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span><span class="p"></span>
+<span class="kn">Library</span><span class="p">     </span><span class="nn">RPA.Salesforce</span><span class="p"></span>
+
+<span class="gh">*** Tasks ***</span><span class="p"></span>
+<span class="c"># Sets the domain for a sandbox environment</span>
+<span class="gu">Set Domain</span><span class="p">    </span><span class="nf">sandbox</span><span class="p"></span>
+
+<span class="c"># Sets the domain to a Salseforce My domain</span>
+<span class="gu">Set Domain</span><span class="p">    </span><span class="nf">robocorp</span><span class="p"></span>
+
+<span class="c"># Sets to domain to the default of &#39;login&#39;</span>
+<span class="gu">Set Domain</span><span class="p"></span>
+</pre></div>
+</div>
 <p><strong>Examples</strong></p>
 <p><strong>Robot Framework</strong></p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="gh">*** Settings ***</span><span class="p"></span>
@@ -500,6 +532,17 @@ Stores operation errors into <cite>Salesforce.dataloader_errors</cite>.</p>
 </dd></dl>
 
 <dl class="method">
+<dt id="RPA.Salesforce.Salesforce.get_domain">
+<code class="sig-name descname">get_domain</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; str<a class="headerlink" href="#RPA.Salesforce.Salesforce.get_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to determine the current domain that has been set</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>string of the currently set domain</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
 <dt id="RPA.Salesforce.Salesforce.get_opportunity_id">
 <code class="sig-name descname">get_opportunity_id</code><span class="sig-paren">(</span><em class="sig-param">opportunity_name: str</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#RPA.Salesforce.Salesforce.get_opportunity_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get ID of an Opportunity linked to set account.</p>
@@ -605,17 +648,18 @@ Stores operation errors into <cite>Salesforce.dataloader_errors</cite>.</p>
 
 <dl class="method">
 <dt id="RPA.Salesforce.Salesforce.salesforce_query">
-<code class="sig-name descname">salesforce_query</code><span class="sig-paren">(</span><em class="sig-param">sql_string: str</em>, <em class="sig-param">as_table: bool = False</em><span class="sig-paren">)</span> &#x2192; dict<a class="headerlink" href="#RPA.Salesforce.Salesforce.salesforce_query" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform SQL query.</p>
+<code class="sig-name descname">salesforce_query</code><span class="sig-paren">(</span><em class="sig-param">sql_string: str</em>, <em class="sig-param">as_table: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[dict, RPA.Tables.Table]<a class="headerlink" href="#RPA.Salesforce.Salesforce.salesforce_query" title="Permalink to this definition">¶</a></dt>
+<dd><p>Perform SQL query and return result as <cite>dict</cite> or <cite>Table</cite>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>sql_string</strong> – SQL clause to perform</p></li>
-<li><p><strong>as_table</strong> – set to <cite>True</cite> if result should be <cite>RPA.Tables.Table</cite></p></li>
+<li><p><strong>sql_string</strong> – SQL clause to perform.</p></li>
+<li><p><strong>as_table</strong> – Set to <cite>True</cite> if the result should be of <cite>RPA.Tables.Table</cite>
+type. (dictionary is returned by default)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>result of the SQL query</p>
+<dd class="field-even"><p>Result of the SQL query.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -623,13 +667,13 @@ Stores operation errors into <cite>Salesforce.dataloader_errors</cite>.</p>
 <dl class="method">
 <dt id="RPA.Salesforce.Salesforce.salesforce_query_result_as_table">
 <code class="sig-name descname">salesforce_query_result_as_table</code><span class="sig-paren">(</span><em class="sig-param">sql_string: str</em><span class="sig-paren">)</span> &#x2192; RPA.Tables.Table<a class="headerlink" href="#RPA.Salesforce.Salesforce.salesforce_query_result_as_table" title="Permalink to this definition">¶</a></dt>
-<dd><p>Perform SQL query and return result as <cite>RPA.Table</cite>.</p>
+<dd><p>Shorthand for <code class="docutils literal notranslate"><span class="pre">Salesforce</span> <span class="pre">Query</span>&#160;&#160;&#160; <span class="pre">${sql_string}</span>&#160;&#160;&#160; <span class="pre">as_table=${True}</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>sql_string</strong> – SQL clause to perform</p>
+<dd class="field-odd"><p><strong>sql_string</strong> – SQL clause to perform.</p>
 </dd>
 <dt class="field-even">Returns</dt>
-<dd class="field-even"><p>result of the SQL query as Table</p>
+<dd class="field-even"><p>Result of the SQL query as <cite>RPA.Tables.Table</cite>.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -659,6 +703,21 @@ Stores operation errors into <cite>Salesforce.dataloader_errors</cite>.</p>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>True if account was found from Salesforce, else False</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.Salesforce.Salesforce.set_domain">
+<code class="sig-name descname">set_domain</code><span class="sig-paren">(</span><em class="sig-param">domain: str = 'login'</em><span class="sig-paren">)</span> &#x2192; None<a class="headerlink" href="#RPA.Salesforce.Salesforce.set_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Used to set the domain the <cite>Auth With Token</cite> keyword will use. To set
+the domain to ‘test’ or if using a sandbox environment use “sandbox” as the
+domain. If you have a Salsesforce My domain you may also input that name. If
+the <cite>domain</cite> argument is not used the default domain is “login”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>domain</strong> – “sandbox” or the name of the Salesforce My domain;
+if no argument provided defaults to “login”</p>
 </dd>
 </dl>
 </dd></dl>
@@ -750,6 +809,25 @@ set self.__traceback__ to tb and return self.</p>
 <dl class="method">
 <dt id="RPA.Salesforce.SalesforceDataNotAnDictionary.with_traceback">
 <code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Salesforce.SalesforceDataNotAnDictionary.with_traceback" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception.with_traceback(tb) –
+set self.__traceback__ to tb and return self.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="RPA.Salesforce.SalesforceDomainChangeError">
+<em class="property">exception </em><code class="sig-prename descclassname">RPA.Salesforce.</code><code class="sig-name descname">SalesforceDomainChangeError</code><a class="headerlink" href="#RPA.Salesforce.SalesforceDomainChangeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Error when changing domains while a session is active.</p>
+<dl class="attribute">
+<dt id="RPA.Salesforce.SalesforceDomainChangeError.args">
+<code class="sig-name descname">args</code><a class="headerlink" href="#RPA.Salesforce.SalesforceDomainChangeError.args" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="RPA.Salesforce.SalesforceDomainChangeError.with_traceback">
+<code class="sig-name descname">with_traceback</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Salesforce.SalesforceDomainChangeError.with_traceback" title="Permalink to this definition">¶</a></dt>
 <dd><p>Exception.with_traceback(tb) –
 set self.__traceback__ to tb and return self.</p>
 </dd></dl>

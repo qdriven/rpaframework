@@ -116,6 +116,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../desktop_operatingsystem/index.html">Desktop.OperatingSystem</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../desktop_windows/index.html">Desktop.Windows</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dialogs/index.html">Dialogs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai/index.html">DocumentAI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_base64ai/index.html">DocumentAI.Base64AI</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../documentai_nanonets/index.html">DocumentAI.Nanonets</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_exchange/index.html">Email.Exchange</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../email_imapsmtp/index.html">Email.ImapSmtp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../excel_application/index.html">Excel.Application</a></li>
@@ -127,6 +130,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../images/index.html">Images</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../javaaccessbridge/index.html">JavaAccessBridge</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../json/index.html">JSON</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../mfa/index.html">MFA</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../msgraph/index.html">MSGraph</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../netsuite/index.html">Netsuite</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../notifier/index.html">Notifier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../outlook_application/index.html">Outlook.Application</a></li>
@@ -248,7 +253,7 @@
 
 <dl class="class">
 <dt id="RPA.Tables.Table">
-<em class="property">class </em><code class="sig-prename descclassname">RPA.Tables.</code><code class="sig-name descname">Table</code><span class="sig-paren">(</span><em class="sig-param">data: Union[Dict[Union[int, str], Union[Dict, List, Tuple, NamedTuple, set]], List[Union[Dict, List, Tuple, NamedTuple, set]], Table, None] = None, columns: Optional[List[str]] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">RPA.Tables.</code><code class="sig-name descname">Table</code><a class="headerlink" href="#RPA.Tables.Table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Container class for tabular data.</p>
 <p>Supported data formats:</p>
@@ -326,7 +331,7 @@
 
 <dl class="method">
 <dt id="RPA.Tables.Table.delete_rows">
-<code class="sig-name descname">delete_rows</code><span class="sig-paren">(</span><em class="sig-param">indexes</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.delete_rows" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">delete_rows</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.delete_rows" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove rows with matching indexes.</p>
 </dd></dl>
 
@@ -336,11 +341,19 @@
 <dd></dd></dl>
 
 <dl class="method">
+<dt id="RPA.Tables.Table.filter_all">
+<code class="sig-name descname">filter_all</code><span class="sig-paren">(</span><em class="sig-param">condition: Callable[[Union[int, str, Dict, List, Tuple, NamedTuple, set]], bool]</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.filter_all" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove rows by evaluating <cite>condition</cite> for every row.</p>
+<p>The filtering will be done in-place and all the rows evaluating as falsy
+through the provided condition will be removed.</p>
+</dd></dl>
+
+<dl class="method">
 <dt id="RPA.Tables.Table.filter_by_column">
-<code class="sig-name descname">filter_by_column</code><span class="sig-paren">(</span><em class="sig-param">column</em>, <em class="sig-param">condition</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.filter_by_column" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove rows by evaluating <cite>condition</cite> for all <cite>column</cite>
-values. All rows where it evaluates to falsy are removed.</p>
-<p>The filtering will be done in-place.</p>
+<code class="sig-name descname">filter_by_column</code><span class="sig-paren">(</span><em class="sig-param">column: Union[int, str], condition: Callable[[Any], bool]</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.filter_by_column" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove rows by evaluating <cite>condition</cite> for cells in <cite>column</cite>.</p>
+<p>The filtering will be done in-place and all the rows where it evaluates to
+falsy are removed.</p>
 </dd></dl>
 
 <dl class="method">
@@ -388,7 +401,7 @@ values. All rows where it evaluates to falsy are removed.</p>
 
 <dl class="method">
 <dt id="RPA.Tables.Table.get_row">
-<code class="sig-name descname">get_row</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">columns=None</em>, <em class="sig-param">as_list=False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.get_row" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_row</code><span class="sig-paren">(</span><em class="sig-param">index: Union[int, str], columns=None, as_list=False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.get_row" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get column values from row.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -403,7 +416,7 @@ values. All rows where it evaluates to falsy are removed.</p>
 
 <dl class="method">
 <dt id="RPA.Tables.Table.get_slice">
-<code class="sig-name descname">get_slice</code><span class="sig-paren">(</span><em class="sig-param">start=None</em>, <em class="sig-param">end=None</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.get_slice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_slice</code><span class="sig-paren">(</span><em class="sig-param">start: Union[int</em>, <em class="sig-param">str</em>, <em class="sig-param">None] = None</em>, <em class="sig-param">end: Union[int</em>, <em class="sig-param">str</em>, <em class="sig-param">None] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.get_slice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a new table from rows between start and end index.</p>
 </dd></dl>
 
@@ -432,12 +445,12 @@ values. All rows where it evaluates to falsy are removed.</p>
 
 <dl class="method">
 <dt id="RPA.Tables.Table.index_location">
-<code class="sig-name descname">index_location</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.index_location" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">index_location</code><span class="sig-paren">(</span><em class="sig-param">value: Union[int, str]</em><span class="sig-paren">)</span> &#x2192; int<a class="headerlink" href="#RPA.Tables.Table.index_location" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Table.iter_dicts">
-<code class="sig-name descname">iter_dicts</code><span class="sig-paren">(</span><em class="sig-param">with_index=True</em><span class="sig-paren">)</span> &#x2192; Generator[Dict[Union[int, str], Any], None, None]<a class="headerlink" href="#RPA.Tables.Table.iter_dicts" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">iter_dicts</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Table.iter_dicts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Iterate rows with values as dicts.</p>
 </dd></dl>
 
@@ -680,7 +693,7 @@ where the keys match current column names. Values for unknown
 keys are discarded.</p>
 <p>It can also be a single value that is set for all columns,
 which is <code class="docutils literal notranslate"><span class="pre">None</span></code> by default.</p>
-<p>Example:s</p>
+<p>Examples:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Add empty row</span>
 <span class="c">Add table row</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
 
@@ -703,6 +716,10 @@ which is <code class="docutils literal notranslate"><span class="pre">None</span
 <dd class="field-odd"><p><strong>table</strong> – Table to clear</p>
 </dd>
 </dl>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Clear table</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -713,12 +730,16 @@ which is <code class="docutils literal notranslate"><span class="pre">None</span
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>table</strong> – Table to copy</p>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Table object</p>
+</dd>
 </dl>
+<p>${table_copy}=    Copy table    ${table}</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.create_table">
-<code class="sig-name descname">create_table</code><span class="sig-paren">(</span><em class="sig-param">data: Union[Dict[Union[int, str], Union[Dict, List, Tuple, NamedTuple, set]], List[Union[Dict, List, Tuple, NamedTuple, set]], Table, None] = None, trim: bool = False, columns: List[str] = None</em><span class="sig-paren">)</span> &#x2192; RPA.Tables.Table<a class="headerlink" href="#RPA.Tables.Tables.create_table" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_table</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.create_table" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create Table object from data.</p>
 <p>Data can be a combination of various iterable containers, e.g.
 list of lists, list of dicts, dict of lists.</p>
@@ -731,9 +752,23 @@ default <cite>False</cite></p></li>
 <li><p><strong>columns</strong> – Names of columns (optional)</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Table object</p>
+</dd>
 </dl>
 <p>See the main library documentation for more information about
 supported data types.</p>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Create a new table using a Dictionary of Lists</span>
+<span class="c"># Because of the dictionary keys the column names will be automatically set</span>
+<span class="c">@{Table_Data_name}=</span><span class="p">    </span><span class="c">Create List</span><span class="p">    </span><span class="c">Mark</span><span class="p">    </span><span class="c">John</span><span class="p">    </span><span class="c">Amy</span><span class="p"></span>
+<span class="c">@{Table_Data_age}=</span><span class="p">    </span><span class="c">Create List</span><span class="p">    </span><span class="c">${58}</span><span class="p">    </span><span class="c">${22}</span><span class="p">    </span><span class="c">${67}</span><span class="p"></span>
+<span class="c">&amp;{Table_Data}=</span><span class="p">    </span><span class="c">Create Dictionary</span><span class="p"></span>
+<span class="c">...</span><span class="p">    </span><span class="c">name=${Table_Data_name}</span><span class="p"></span>
+<span class="c">...</span><span class="p">    </span><span class="c">age=${Table_Data_age}</span><span class="p"></span>
+<span class="c">${table}=</span><span class="p">    </span><span class="c">Create Table</span><span class="p">    </span><span class="c">${Table_Data}</span><span class="p"></span>
+</pre></div>
+</div>
 </dd></dl>
 
 <dl class="method">
@@ -747,6 +782,9 @@ supported data types.</p>
 <li><p><strong>with_index</strong> – Include index in values</p></li>
 <li><p><strong>as_list</strong> – Export data as list instead of dict</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A List or Dictionary that represents the table</p>
 </dd>
 </dl>
 <p>Example:</p>
@@ -770,8 +808,7 @@ supported data types.</p>
 </dl>
 <p>The filtering will be done in-place.</p>
 <p>Example:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${table}=</span><span class="p">    </span><span class="c">Read worksheet as table</span><span class="p">    </span><span class="c">orders.xlsx</span><span class="p"></span>
-<span class="c">Filter empty rows</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Filter empty rows</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
@@ -806,18 +843,39 @@ and their descriptions.</p>
 </dd></dl>
 
 <dl class="method">
-<dt id="RPA.Tables.Tables.find_table_rows">
-<code class="sig-name descname">find_table_rows</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, column: Union[int, str], operator: str, value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.find_table_rows" title="Permalink to this definition">¶</a></dt>
-<dd><p>Find all rows in a table which match a condition for a
-given column.</p>
+<dt id="RPA.Tables.Tables.filter_table_with_keyword">
+<code class="sig-name descname">filter_table_with_keyword</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">name: str</em>, <em class="sig-param">*args</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.filter_table_with_keyword" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a keyword for each row of a table, then remove all rows where the called
+keyword returns a falsy value.</p>
+<p>Can be used to create custom RF keyword based filters.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>table</strong> – Table to find from</p></li>
-<li><p><strong>column</strong> – Name of column to search</p></li>
-<li><p><strong>operator</strong> – Comparison operator</p></li>
-<li><p><strong>value</strong> – Value to compare against</p></li>
+<li><p><strong>table</strong> – Table to modify.</p></li>
+<li><p><strong>name</strong> – Keyword name used as filter.</p></li>
+<li><p><strong>args</strong> – Additional keyword arguments to be passed. (optional)</p></li>
 </ul>
+</dd>
+</dl>
+<p>The row object will be given as the first argument to the filtering keyword.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.Tables.Tables.find_table_rows">
+<code class="sig-name descname">find_table_rows</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, column: Union[int, str], operator: str, value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.find_table_rows" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find all the rows in a table which match a condition for a given column.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – Table to search into.</p></li>
+<li><p><strong>column</strong> – Name or position of the column to compare with.</p></li>
+<li><p><strong>operator</strong> – Comparison operator used with every cell value on the
+specified column.</p></li>
+<li><p><strong>value</strong> – Value to compare against.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>New <cite>Table</cite> object containing all the rows matching the condition.</p>
 </dd>
 </dl>
 <p>Supported operators:</p>
@@ -870,20 +928,20 @@ given column.</p>
 </tr>
 </tbody>
 </table>
-<p>Returns the matches as a new Table instance.</p>
+<p>Returns the matches as a new <cite>Table</cite> instance.</p>
 <p>Examples:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Find all rows where price is over 200</span>
-<span class="c">@{rows}=</span><span class="p">    </span><span class="c">Find table rows</span><span class="p">    </span><span class="c">Price</span><span class="p">  </span><span class="c">&gt;</span><span class="p">  </span><span class="c">${200}</span><span class="p"></span>
+<span class="c">@{rows} =</span><span class="p">    </span><span class="c">Find table rows</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">Price</span><span class="p">  </span><span class="c">&gt;</span><span class="p">  </span><span class="c">${200}</span><span class="p"></span>
 
 <span class="c"># Find all rows where the status does not contain &quot;removed&quot;</span>
-<span class="c">@{rows}=</span><span class="p">    </span><span class="c">Find table rows</span><span class="p">    </span><span class="c">Status</span><span class="p">    </span><span class="c">not contains</span><span class="p">    </span><span class="c">removed</span><span class="p"></span>
+<span class="c">@{rows} =</span><span class="p">    </span><span class="c">Find table rows</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">Status</span><span class="p">  </span><span class="c">not contains</span><span class="p">  </span><span class="c">removed</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.get_table_cell">
-<code class="sig-name descname">get_table_cell</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: int, column: Union[int, str]</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#RPA.Tables.Tables.get_table_cell" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_table_cell</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: Union[int, str], column: Union[int, str]</em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#RPA.Tables.Tables.get_table_cell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a cell value from a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -893,6 +951,9 @@ given column.</p>
 <li><p><strong>column</strong> – Column of cell</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Cell value</p>
+</dd>
 </dl>
 <p>Examples:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Get the value in the first row and first column</span>
@@ -900,6 +961,9 @@ given column.</p>
 
 <span class="c"># Get the value in the last row and first column</span>
 <span class="c">Get table cell</span><span class="p">    </span><span class="c">${table}</span><span class="p">   </span><span class="c">-1</span><span class="p">    </span><span class="c">0</span><span class="p"></span>
+
+<span class="c"># Get the value in the last row and last column</span>
+<span class="c">Get table cell</span><span class="p">    </span><span class="c">${table}</span><span class="p">   </span><span class="c">-1</span><span class="p">    </span><span class="c">-1</span><span class="p"></span>
 
 <span class="c"># Get the value in the third row and column &quot;Name&quot;</span>
 <span class="c">Get table cell</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">2</span><span class="p">    </span><span class="c">Name</span><span class="p"></span>
@@ -918,26 +982,30 @@ given column.</p>
 <li><p><strong>column</strong> – Column to read</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of the rows in the selected column</p>
+</dd>
 </dl>
 <p>Example:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${emails}=</span><span class="p">    </span><span class="c">Get table column</span><span class="p">    </span><span class="c">${users}</span><span class="p">    </span><span class="c">E-Mail Address</span><span class="p"></span>
-<span class="c">FOR</span><span class="p">    </span><span class="c">${email}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{emails}</span><span class="p"></span>
-<span class="p">    </span><span class="c">Send promotion</span><span class="p">    </span><span class="c">${email}</span><span class="p"></span>
-<span class="c">END</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.get_table_dimensions">
-<code class="sig-name descname">get_table_dimensions</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em><span class="sig-paren">)</span> &#x2192; Tuple[int, int]<a class="headerlink" href="#RPA.Tables.Tables.get_table_dimensions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_table_dimensions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.get_table_dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return table dimensions, as (rows, columns).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>table</strong> – Table to inspect</p>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Two integer values that represent the number
+of rows and columns</p>
+</dd>
 </dl>
-<p>Examples:</p>
+<p>Example:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${rows}</span><span class="p">  </span><span class="c">${columns}=</span><span class="p">    </span><span class="c">Get table dimensions</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
 <span class="c">Log</span><span class="p">    </span><span class="c">Table has ${rows} rows and ${columns} columns.</span><span class="p"></span>
 </pre></div>
@@ -946,7 +1014,7 @@ given column.</p>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.get_table_row">
-<code class="sig-name descname">get_table_row</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">row: int</em>, <em class="sig-param">as_list: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[Dict, List]<a class="headerlink" href="#RPA.Tables.Tables.get_table_row" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_table_row</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: Union[int, str], as_list: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[Dict, List]<a class="headerlink" href="#RPA.Tables.Tables.get_table_row" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get a single row from a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -956,22 +1024,23 @@ given column.</p>
 <li><p><strong>as_list</strong> – Return list instead of dictionary</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary or List of table row</p>
+</dd>
 </dl>
 <p>Examples:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${first}=</span><span class="p">    </span><span class="c">Get table row</span><span class="p">    </span><span class="c">${orders}</span><span class="p"></span>
-<span class="c">Log</span><span class="p">     </span><span class="c">Handling order: ${first}[Order ID]</span><span class="p"></span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># returns the first row in the table</span>
+<span class="c">${first}=</span><span class="p">    </span><span class="c">Get table row</span><span class="p">    </span><span class="c">${orders}</span><span class="p"></span>
 
-<span class="c">${row}=</span><span class="p">      </span><span class="c">Get table row</span><span class="p">    </span><span class="c">${data}</span><span class="p">    </span><span class="c">-1</span><span class="p">    </span><span class="c">as_list=${TRUE}</span><span class="p"></span>
-<span class="c">FOR</span><span class="p">    </span><span class="c">${value}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{row}</span><span class="p"></span>
-<span class="p">    </span><span class="c">Log</span><span class="p">    </span><span class="c">Data point: ${value}</span><span class="p"></span>
-<span class="c">END</span><span class="p"></span>
+<span class="c"># returns the last row in the table</span>
+<span class="c">${last}=</span><span class="p">      </span><span class="c">Get table row</span><span class="p">    </span><span class="c">${orders}</span><span class="p">    </span><span class="c">-1</span><span class="p">    </span><span class="c">as_list=${TRUE}</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.get_table_slice">
-<code class="sig-name descname">get_table_slice</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">start: Optional[int] = None</em>, <em class="sig-param">end: Optional[int] = None</em><span class="sig-paren">)</span> &#x2192; Union[RPA.Tables.Table, List[List]]<a class="headerlink" href="#RPA.Tables.Tables.get_table_slice" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_table_slice</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.get_table_slice" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return a new Table from a range of given Table rows.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -980,6 +1049,9 @@ given column.</p>
 <li><p><strong>start</strong> – Start index (inclusive)</p></li>
 <li><p><strong>start</strong> – End index (exclusive)</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Table object of the selected rows</p>
 </dd>
 </dl>
 <p>If <code class="docutils literal notranslate"><span class="pre">start</span></code> is not defined, starts from the first row.
@@ -999,7 +1071,7 @@ If <code class="docutils literal notranslate"><span class="pre">end</span></code
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.group_table_by_column">
-<code class="sig-name descname">group_table_by_column</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, column: Union[int, str]</em><span class="sig-paren">)</span> &#x2192; List[RPA.Tables.Table]<a class="headerlink" href="#RPA.Tables.Tables.group_table_by_column" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">group_table_by_column</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.group_table_by_column" title="Permalink to this definition">¶</a></dt>
 <dd><p>Group a table by <code class="docutils literal notranslate"><span class="pre">column</span></code> and return a list of grouped Tables.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1008,14 +1080,46 @@ If <code class="docutils literal notranslate"><span class="pre">end</span></code
 <li><p><strong>column</strong> – Column which is used as grouping criteria</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>List of Table objects</p>
+</dd>
 </dl>
 <p>Example:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${orders}=</span><span class="p">    </span><span class="c">Read worksheet as table</span><span class="p">    </span><span class="c">orders.xlsx</span><span class="p"></span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Groups rows of matching customers from the `customer` column</span>
+<span class="c"># and returns the groups or rows as Tables</span>
 <span class="c">@{groups}=</span><span class="p">    </span><span class="c">Group table by column</span><span class="p">    </span><span class="c">${orders}</span><span class="p">    </span><span class="c">customer</span><span class="p"></span>
+<span class="c"># An example of how to use the List of Tables once returned</span>
 <span class="c">FOR</span><span class="p">    </span><span class="c">${group}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{groups}</span><span class="p"></span>
 <span class="p">    </span><span class="c"># Process all orders for the customer at once</span>
 <span class="p">    </span><span class="c">Process order</span><span class="p">    </span><span class="c">${group}</span><span class="p"></span>
 <span class="c">END</span><span class="p"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="RPA.Tables.Tables.map_column_values">
+<code class="sig-name descname">map_column_values</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, column: Union[int, str], name: str, *args</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.map_column_values" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run a keyword for each cell in a given column, and replace its content with
+the return value.</p>
+<p>Can be used to easily convert column types or values in-place.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>table</strong> – Table to modify.</p></li>
+<li><p><strong>column</strong> – Column to modify.</p></li>
+<li><p><strong>name</strong> – Mapping keyword name.</p></li>
+<li><p><strong>args</strong> – Additional keyword arguments. (optional)</p></li>
+</ul>
+</dd>
+</dl>
+<p>The cell value will be given as the first argument to the mapping keyword.</p>
+<p>Examples:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Convert all columns values to a different type</span>
+<span class="c">Map column values</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">Price</span><span class="p">    </span><span class="c">Convert to integer</span><span class="p"></span>
+
+<span class="c"># Look up values with a custom keyword</span>
+<span class="c">Map column values</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">User</span><span class="p">     </span><span class="c">Map user ID to name</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1030,6 +1134,9 @@ If <code class="docutils literal notranslate"><span class="pre">end</span></code
 <li><p><strong>tables</strong> – Tables to merge</p></li>
 <li><p><strong>index</strong> – Column name to use as index for merge</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Table object</p>
 </dd>
 </dl>
 <p>By default rows from all tables are appended one after the other.
@@ -1105,6 +1212,9 @@ instead of appending multiple copies of the same name.</p>
 <li><p><strong>column</strong> – Column to remove</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary or List of the removed, popped, column</p>
+</dd>
 </dl>
 <p>Examples:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Remove column from table and discard it</span>
@@ -1121,7 +1231,7 @@ instead of appending multiple copies of the same name.</p>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.pop_table_row">
-<code class="sig-name descname">pop_table_row</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">row: Optional[int] = None</em>, <em class="sig-param">as_list: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[Dict, List]<a class="headerlink" href="#RPA.Tables.Tables.pop_table_row" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pop_table_row</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">row: Union[int</em>, <em class="sig-param">str</em>, <em class="sig-param">None] = None</em>, <em class="sig-param">as_list: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[Dict, List]<a class="headerlink" href="#RPA.Tables.Tables.pop_table_row" title="Permalink to this definition">¶</a></dt>
 <dd><p>Remove row from table and return it.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1131,22 +1241,23 @@ instead of appending multiple copies of the same name.</p>
 <li><p><strong>as_list</strong> – Return list instead of dictionary</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dictionary or List of the removed, popped, row</p>
+</dd>
 </dl>
 <p>Examples:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${first}=</span><span class="p">    </span><span class="c">Pop table row</span><span class="p">    </span><span class="c">${orders}</span><span class="p"></span>
-<span class="c">Log</span><span class="p">     </span><span class="c">Handling order: ${first}[Order ID]</span><span class="p"></span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Pop the firt row in the table and discard it</span>
+<span class="c">Pop table row</span><span class="p">    </span><span class="c">${orders}</span><span class="p"></span>
 
+<span class="c"># Pop the last row in the table and store it</span>
 <span class="c">${row}=</span><span class="p">      </span><span class="c">Pop table row</span><span class="p">    </span><span class="c">${data}</span><span class="p">    </span><span class="c">-1</span><span class="p">    </span><span class="c">as_list=${TRUE}</span><span class="p"></span>
-<span class="c">FOR</span><span class="p">    </span><span class="c">${value}</span><span class="p">    </span><span class="c">IN</span><span class="p">    </span><span class="c">@{row}</span><span class="p"></span>
-<span class="p">    </span><span class="c">Log</span><span class="p">    </span><span class="c">Data point: ${value}</span><span class="p"></span>
-<span class="c">END</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.read_table_from_csv">
-<code class="sig-name descname">read_table_from_csv</code><span class="sig-paren">(</span><em class="sig-param">path: str</em>, <em class="sig-param">header: Optional[bool] = None</em>, <em class="sig-param">columns: Optional[List[str]] = None</em>, <em class="sig-param">dialect: Optional[RPA.Tables.Dialect] = None</em>, <em class="sig-param">delimiters: Optional[str] = None</em>, <em class="sig-param">column_unknown: str = 'Unknown'</em>, <em class="sig-param">encoding: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; RPA.Tables.Table<a class="headerlink" href="#RPA.Tables.Tables.read_table_from_csv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_table_from_csv</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.read_table_from_csv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read a CSV file as a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1160,6 +1271,9 @@ instead of appending multiple copies of the same name.</p>
 <li><p><strong>encoding</strong> – Text encoding for input file,
 uses system encoding by default</p></li>
 </ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Table object</p>
 </dd>
 </dl>
 <p>By default attempts to deduce the CSV format and headers
@@ -1189,7 +1303,7 @@ given by <code class="docutils literal notranslate"><span class="pre">column_unk
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.rename_table_columns">
-<code class="sig-name descname">rename_table_columns</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, names: List[Optional[str]], strict: bool = False</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.rename_table_columns" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">rename_table_columns</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.rename_table_columns" title="Permalink to this definition">¶</a></dt>
 <dd><p>Renames columns in the Table with given values. Columns with
 name as <code class="docutils literal notranslate"><span class="pre">None</span></code> will use the previous value.</p>
 <dl class="field-list simple">
@@ -1204,11 +1318,12 @@ do not match</p></li>
 </dl>
 <p>The renaming will be done in-place.</p>
 <p>Examples:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${columns}=</span><span class="p">    </span><span class="c">Create list</span><span class="p">   </span><span class="c">First</span><span class="p">  </span><span class="c">Second</span><span class="p">  </span><span class="c">Third</span><span class="p"></span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Initially set the column names</span>
+<span class="c">${columns}=</span><span class="p">    </span><span class="c">Create list</span><span class="p">   </span><span class="c">First</span><span class="p">  </span><span class="c">Second</span><span class="p">  </span><span class="c">Third</span><span class="p"></span>
 <span class="c">Rename table columns</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">${columns}</span><span class="p"></span>
 <span class="c"># First, Second, Third</span>
 
-
+<span class="c"># Update the first and second column names to Uno and Dos</span>
 <span class="c">${columns}=</span><span class="p">    </span><span class="c">Create list</span><span class="p">   </span><span class="c">Uno</span><span class="p">  </span><span class="c">Dos</span><span class="p"></span>
 <span class="c">Rename table columns</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">${columns}</span><span class="p"></span>
 <span class="c"># Uno, Dos, Third</span>
@@ -1218,7 +1333,7 @@ do not match</p></li>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.set_row_as_column_names">
-<code class="sig-name descname">set_row_as_column_names</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">row: int</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_row_as_column_names" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_row_as_column_names</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: Union[int, str]</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_row_as_column_names" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set existing row as names for columns.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1228,8 +1343,8 @@ do not match</p></li>
 </ul>
 </dd>
 </dl>
-<p>Examples:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${table}=</span><span class="p">    </span><span class="c">Read table from CSV</span><span class="p">    </span><span class="c">data.csv</span><span class="p"></span>
+<p>Example:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Set the column names based on the first row</span>
 <span class="c">Set row as column names</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">0</span><span class="p"></span>
 </pre></div>
 </div>
@@ -1237,7 +1352,7 @@ do not match</p></li>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.set_table_cell">
-<code class="sig-name descname">set_table_cell</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: int, column: Union[int, str], value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_table_cell" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_table_cell</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: Union[int, str], column: Union[int, str], value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_table_cell" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set a cell value in a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1256,6 +1371,9 @@ do not match</p></li>
 <span class="c"># Set the value in the last row and first column to &quot;Last&quot;</span>
 <span class="c">Set table cell</span><span class="p">    </span><span class="c">${table}</span><span class="p">   </span><span class="c">-1</span><span class="p">    </span><span class="c">0</span><span class="p">       </span><span class="c">Last</span><span class="p"></span>
 
+<span class="c"># Set the value in the last row and last column to &quot;Corner&quot;</span>
+<span class="c">Set table cell</span><span class="p">    </span><span class="c">${table}</span><span class="p">   </span><span class="c">-1</span><span class="p">    </span><span class="c">-1</span><span class="p">       </span><span class="c">Corner</span><span class="p"></span>
+
 <span class="c"># Set the value in the third row and column &quot;Name&quot; to &quot;Unknown&quot;</span>
 <span class="c">Set table cell</span><span class="p">    </span><span class="c">${table}</span><span class="p">    </span><span class="c">2</span><span class="p">    </span><span class="c">Name</span><span class="p">    </span><span class="c">Unknown</span><span class="p"></span>
 </pre></div>
@@ -1265,7 +1383,7 @@ do not match</p></li>
 <dl class="method">
 <dt id="RPA.Tables.Tables.set_table_column">
 <code class="sig-name descname">set_table_column</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, column: Union[int, str], values: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_table_column" title="Permalink to this definition">¶</a></dt>
-<dd><p>Assign values to entire column in the table.</p>
+<dd><p>Assign values to a column in the table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1290,7 +1408,7 @@ one single value that is set for all rows.</p>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.set_table_row">
-<code class="sig-name descname">set_table_row</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">row: int</em>, <em class="sig-param">values: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_table_row" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_table_row</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table, row: Union[int, str], values: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.set_table_row" title="Permalink to this definition">¶</a></dt>
 <dd><p>Assign values to a row in the table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1333,16 +1451,19 @@ keys are discarded.</p>
 </ul>
 </dd>
 </dl>
-<p>Example:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${orders}=</span><span class="p">    </span><span class="c">Read worksheet as table</span><span class="p">    </span><span class="c">orders.xlsx</span><span class="p"></span>
+<p>Examples:</p>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Sorts the `order_date` column ascending</span>
 <span class="c">Sort table by column</span><span class="p">    </span><span class="c">${orders}</span><span class="p">    </span><span class="c">order_date</span><span class="p"></span>
+
+<span class="c"># Sorts the `order_date` column descending</span>
+<span class="c">Sort table by column</span><span class="p">    </span><span class="c">${orders}</span><span class="p">    </span><span class="c">order_date</span><span class="p">    </span><span class="c">ascending=${FALSE}</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.table_head">
-<code class="sig-name descname">table_head</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">count: int = 5</em>, <em class="sig-param">as_list: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[RPA.Tables.Table, List[List]]<a class="headerlink" href="#RPA.Tables.Tables.table_head" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">table_head</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.table_head" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return first <code class="docutils literal notranslate"><span class="pre">count</span></code> rows from a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1352,18 +1473,20 @@ keys are discarded.</p>
 <li><p><strong>as_list</strong> – Return list instead of Table</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return Table object or List of the selected rows</p>
+</dd>
 </dl>
-<p>Examples:</p>
+<p>Example:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Get the first 10 employees</span>
-<span class="c">${employees}=</span><span class="p">    </span><span class="c">Read worksheet as table</span><span class="p">    </span><span class="c">employees.xlsx</span><span class="p"></span>
-<span class="c">${first}=</span><span class="p">        </span><span class="c">Table head</span><span class="p">    </span><span class="c">${employees}</span><span class="p">    </span><span class="c">10</span><span class="p"></span>
+<span class="c">${first}=</span><span class="p">    </span><span class="c">Table head</span><span class="p">    </span><span class="c">${employees}</span><span class="p">    </span><span class="c">10</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
 
 <dl class="method">
 <dt id="RPA.Tables.Tables.table_tail">
-<code class="sig-name descname">table_tail</code><span class="sig-paren">(</span><em class="sig-param">table: RPA.Tables.Table</em>, <em class="sig-param">count: int = 5</em>, <em class="sig-param">as_list: bool = False</em><span class="sig-paren">)</span> &#x2192; Union[RPA.Tables.Table, List[List]]<a class="headerlink" href="#RPA.Tables.Tables.table_tail" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">table_tail</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.Tables.table_tail" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return last <code class="docutils literal notranslate"><span class="pre">count</span></code> rows from a table.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1373,10 +1496,12 @@ keys are discarded.</p>
 <li><p><strong>as_list</strong> – Return list instead of Table</p></li>
 </ul>
 </dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Return Table object or List of the selected rows</p>
+</dd>
 </dl>
-<p>Examples:</p>
+<p>Example:</p>
 <div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># Get the last 10 orders</span>
-<span class="c">${orders}=</span><span class="p">    </span><span class="c">Read worksheet as table</span><span class="p">    </span><span class="c">orders.xlsx</span><span class="p"></span>
 <span class="c">${latest}=</span><span class="p">    </span><span class="c">Table tail</span><span class="p">    </span><span class="c">${orders}</span><span class="p">    </span><span class="c">10</span><span class="p"></span>
 </pre></div>
 </div>
@@ -1393,10 +1518,11 @@ keys are discarded.</p>
 </dl>
 <p>The filtering will be done in-place.</p>
 <p>Example:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${table}=</span><span class="p">    </span><span class="c">Read table from CSV</span><span class="p">    </span><span class="c">data.csv</span><span class="p"></span>
-<span class="c">Log</span><span class="p">    </span><span class="c">${table.columns}</span><span class="p">  </span><span class="c"># &quot;One&quot;, &quot;Two &quot;, &quot;  Three &quot;</span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c"># This example will take colums such as:</span>
+<span class="c"># &quot;One&quot;, &quot;Two &quot;, &quot;  Three &quot;</span>
+<span class="c"># and trim them to become the below:</span>
+<span class="c"># &quot;One&quot;, &quot;Two&quot;, &quot;Three&quot;</span>
 <span class="c">Trim column names</span><span class="p">     </span><span class="c">${table}</span><span class="p"></span>
-<span class="c">Log</span><span class="p">    </span><span class="c">${table-columns}</span><span class="p">  </span><span class="c"># &quot;One&quot;, &quot;Two&quot;, &quot;Three&quot;</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1413,8 +1539,7 @@ which have only <code class="docutils literal notranslate"><span class="pre">Non
 </dl>
 <p>The filtering will be done in-place.</p>
 <p>Example:</p>
-<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">${table}=</span><span class="p">    </span><span class="c">Read worksheet as table</span><span class="p">    </span><span class="c">orders.xlsx</span><span class="p"></span>
-<span class="c">Trim empty rows</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
+<div class="highlight-robotframework notranslate"><div class="highlight"><pre><span></span><span class="c">Trim empty rows</span><span class="p">    </span><span class="c">${table}</span><span class="p"></span>
 </pre></div>
 </div>
 </dd></dl>
@@ -1460,7 +1585,7 @@ uses system encoding by default</p></li>
 
 <dl class="function">
 <dt id="RPA.Tables.to_condition">
-<code class="sig-prename descclassname">RPA.Tables.</code><code class="sig-name descname">to_condition</code><span class="sig-paren">(</span><em class="sig-param">operator: str</em>, <em class="sig-param">value: Any</em><span class="sig-paren">)</span><a class="headerlink" href="#RPA.Tables.to_condition" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">RPA.Tables.</code><code class="sig-name descname">to_condition</code><span class="sig-paren">(</span><em class="sig-param">operator: str</em>, <em class="sig-param">value: Any</em><span class="sig-paren">)</span> &#x2192; Callable[[Any], bool]<a class="headerlink" href="#RPA.Tables.to_condition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert string operator into callable condition function.</p>
 </dd></dl>
 
